@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PEGASUS - Gestão premium para negócios de beleza</title>
+    <meta
+      name="description"
+      content="Agenda, finanças e operação em um único sistema para salões, barbearias e negócios de autocuidado."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="PEGASUS_tokens.css" />
+    <link rel="stylesheet" href="hero.css" />
+  </head>
+  <body>
+    <section class="hero" aria-labelledby="hero-title">
+      <img
+        class="hero__background"
+        src="assets/hero-landscape.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__shell">
+        <header class="site-header" aria-label="Navegação principal">
+          <div class="site-header__left">
+            <a class="site-header__brand" href="#" aria-label="PEGASUS">
+              <img src="assets/pegasus-logo-white.png" alt="PEGASUS" />
+            </a>
+
+            <nav class="site-header__nav" aria-label="Seções do site">
+              <a href="#produto">Produto</a>
+              <a href="#beneficios">Benefícios</a>
+              <a href="#demonstracao">Demonstração</a>
+            </nav>
+          </div>
+
+          <div class="site-header__actions">
+            <a class="site-header__login" href="#entrar">Entrar</a>
+            <a class="site-header__cta" href="#comecar">Começar agora</a>
+          </div>
+        </header>
+
+        <main class="hero__content">
+          <div class="hero__badge">
+            <span></span>
+            Agenda e controle
+          </div>
+
+          <h1 id="hero-title">
+            <span>O seu negócio, finalmente</span>
+            <span>no lugar certo.</span>
+          </h1>
+
+          <p class="hero__lead">
+            Agenda, finanças e operação em um único sistema. Para quem leva o
+            próprio negócio a sério.
+          </p>
+
+          <div class="hero__actions" aria-label="Ações principais">
+            <a class="pg-button pg-button-primary hero__primary" href="#comecar">
+              Começar gratuitamente
+            </a>
+            <a class="pg-button hero__secondary" href="#demonstracao">
+              Ver uma demonstração
+            </a>
+          </div>
+
+          <p class="hero__support">
+            Sem cartão de crédito. Acesso imediato.
+          </p>
+        </main>
+
+        <aside class="operation-strip" aria-label="Indicadores do PEGASUS">
+          <div class="operation-strip__item">
+            <span>Hoje</span>
+            <div class="operation-strip__metric">
+              <strong>94% de ocupação</strong>
+              <small>+12%</small>
+            </div>
+            <div class="operation-strip__bar" style="--value: 94%"></div>
+          </div>
+          <div class="operation-strip__item">
+            <span>Semana</span>
+            <div class="operation-strip__metric">
+              <strong>R$ 4.280 faturados</strong>
+              <small>7 dias</small>
+            </div>
+            <div class="operation-strip__bar" style="--value: 76%"></div>
+          </div>
+          <div class="operation-strip__item">
+            <span>Agenda</span>
+            <div class="operation-strip__metric">
+              <strong>3 confirmações pendentes</strong>
+              <small>agora</small>
+            </div>
+            <div class="operation-strip__bar" style="--value: 48%"></div>
+          </div>
+          <div class="operation-strip__item">
+            <span>Operação</span>
+            <div class="operation-strip__metric">
+              <strong>Tudo sob controle</strong>
+              <small>ativo</small>
+            </div>
+            <div class="operation-strip__bar" style="--value: 88%"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="next-preview" id="produto" aria-label="Próxima seção">
+      <div class="pg-container next-preview__inner">
+        <span class="pg-eyebrow">Filosofia do produto</span>
+        <p>Construído para quem não aceita mediocridade.</p>
+      </div>
+    </section>
+
+    <script>
+      const header = document.querySelector(".site-header");
+
+      function updateHeaderState() {
+        header.classList.toggle("is-scrolled", window.scrollY > 16);
+      }
+
+      updateHeaderState();
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+    </script>
+  </body>
+</html>
