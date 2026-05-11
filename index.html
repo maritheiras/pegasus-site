@@ -45,6 +45,33 @@
             <a class="site-header__login" href="#entrar">Entrar</a>
             <a class="site-header__cta" href="#comecar">Começar agora</a>
           </div>
+
+          <button
+            class="site-header__menu-button"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-menu__nav" aria-label="Menu mobile">
+              <span>Produto</span>
+              <a href="#produto">Produto</a>
+              <a href="#beneficios">Benefícios</a>
+              <a href="#demonstracao">Demonstração</a>
+            </nav>
+
+            <div class="mobile-menu__actions">
+              <span>Acesso</span>
+              <a class="mobile-menu__login" href="#entrar">Entrar</a>
+              <a class="mobile-menu__cta" href="#comecar">Começar agora</a>
+            </div>
+          </div>
         </header>
 
         <main class="hero__content">
@@ -123,13 +150,44 @@
 
     <script>
       const header = document.querySelector(".site-header");
+      const menuButton = document.querySelector(".site-header__menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const desktopQuery = window.matchMedia("(min-width: 901px)");
 
       function updateHeaderState() {
         header.classList.toggle("is-scrolled", window.scrollY > 16);
       }
 
+      function updateMenuState(isOpen) {
+        header.classList.toggle("is-menu-open", isOpen);
+        document.body.classList.toggle("is-menu-open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      }
+
+      function closeMobileMenu() {
+        updateMenuState(false);
+      }
+
       updateHeaderState();
       window.addEventListener("scroll", updateHeaderState, { passive: true });
+      menuButton.addEventListener("click", () => {
+        updateMenuState(!header.classList.contains("is-menu-open"));
+      });
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          closeMobileMenu();
+        }
+      });
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+      desktopQuery.addEventListener("change", (event) => {
+        if (event.matches) {
+          closeMobileMenu();
+        }
+      });
     </script>
   </body>
 </html>
