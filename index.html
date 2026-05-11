@@ -18,6 +18,52 @@
     <link rel="stylesheet" href="hero.css" />
   </head>
   <body>
+    <header class="site-header" aria-label="Navegação principal">
+      <div class="site-header__left">
+        <a class="site-header__brand" href="#" aria-label="PEGASUS">
+          <img src="assets/pegasus-logo-white.png" alt="PEGASUS" />
+        </a>
+
+        <nav class="site-header__nav" aria-label="Seções do site">
+          <a href="#produto">Produto</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#demonstracao">Demonstração</a>
+        </nav>
+      </div>
+
+      <div class="site-header__actions">
+        <a class="site-header__login" href="#entrar">Entrar</a>
+        <a class="site-header__cta" href="#comecar">Começar agora</a>
+      </div>
+
+      <button
+        class="site-header__menu-button"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu__nav" aria-label="Menu mobile">
+          <span>Produto</span>
+          <a href="#produto">Produto</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#demonstracao">Demonstração</a>
+        </nav>
+
+        <div class="mobile-menu__actions">
+          <span>Acesso</span>
+          <a class="mobile-menu__login" href="#entrar">Entrar</a>
+          <a class="mobile-menu__cta" href="#comecar">Começar agora</a>
+        </div>
+      </div>
+    </header>
+
     <section class="hero" aria-labelledby="hero-title">
       <img
         class="hero__background"
@@ -28,55 +74,9 @@
       <div class="hero__shade" aria-hidden="true"></div>
 
       <div class="hero__shell">
-        <header class="site-header" aria-label="Navegação principal">
-          <div class="site-header__left">
-            <a class="site-header__brand" href="#" aria-label="PEGASUS">
-              <img src="assets/pegasus-logo-white.png" alt="PEGASUS" />
-            </a>
-
-            <nav class="site-header__nav" aria-label="Seções do site">
-              <a href="#produto">Produto</a>
-              <a href="#beneficios">Benefícios</a>
-              <a href="#demonstracao">Demonstração</a>
-            </nav>
-          </div>
-
-          <div class="site-header__actions">
-            <a class="site-header__login" href="#entrar">Entrar</a>
-            <a class="site-header__cta" href="#comecar">Começar agora</a>
-          </div>
-
-          <button
-            class="site-header__menu-button"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <div class="mobile-menu" id="mobile-menu">
-            <nav class="mobile-menu__nav" aria-label="Menu mobile">
-              <span>Produto</span>
-              <a href="#produto">Produto</a>
-              <a href="#beneficios">Benefícios</a>
-              <a href="#demonstracao">Demonstração</a>
-            </nav>
-
-            <div class="mobile-menu__actions">
-              <span>Acesso</span>
-              <a class="mobile-menu__login" href="#entrar">Entrar</a>
-              <a class="mobile-menu__cta" href="#comecar">Começar agora</a>
-            </div>
-          </div>
-        </header>
-
         <main class="hero__content">
           <div class="hero__badge">
-            <span></span>
+            <span class="signal-dot signal-dot--light" aria-hidden="true"></span>
             Agenda e controle
           </div>
 
@@ -141,10 +141,173 @@
       </div>
     </section>
 
-    <section class="next-preview" id="produto" aria-label="Próxima seção">
-      <div class="pg-container next-preview__inner">
-        <span class="pg-eyebrow">Filosofia do produto</span>
-        <p>Construído para quem não aceita mediocridade.</p>
+    <section class="product-section" id="produto" aria-labelledby="product-title">
+      <div class="pg-container">
+        <div class="product-section__intro">
+          <div class="product-section__headline">
+            <span class="product-kicker">
+              <span class="signal-dot signal-dot--sand" aria-hidden="true"></span>
+              Controle operacional
+            </span>
+            <h2 id="product-title">
+              <span>Construído para quem</span>
+              <span>não aceita mediocridade.</span>
+            </h2>
+          </div>
+
+          <div class="product-section__features" id="beneficios">
+            <article>
+              <span>01</span>
+              <strong>Agenda que funciona por você</strong>
+              <p>Visualize horários, equipe e confirmações sem depender de conversas soltas.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>Finanças sem surpresa</strong>
+              <p>Entradas, despesas e comissões aparecem em tempo real, com clareza.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>Automação com precisão</strong>
+              <p>Lembretes, confirmações e follow-ups mantêm sua operação em movimento.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="product-showcase" id="demonstracao">
+          <aside class="product-showcase__rail">
+            <div>
+              <span class="product-showcase__label">Sistema PEGASUS</span>
+              <h3>Menos WhatsApp. Mais negócio.</h3>
+              <p>
+                O que antes ficava espalhado entre mensagens, planilhas e memória agora aparece
+                em um fluxo único, claro e confiável.
+              </p>
+            </div>
+
+            <a class="product-showcase__button" href="#comecar">Ver demonstração</a>
+
+            <div class="product-flow" aria-label="Fluxo do produto">
+              <div class="product-flow__item is-active">
+                <span>01</span>
+                <div>
+                  <strong>Organize a agenda</strong>
+                  <small>Dia, semana, profissional e capacidade.</small>
+                </div>
+              </div>
+              <div class="product-flow__item">
+                <span>02</span>
+                <div>
+                  <strong>Confirme automaticamente</strong>
+                  <small>Menos faltas, menos mensagens manuais.</small>
+                </div>
+              </div>
+              <div class="product-flow__item">
+                <span>03</span>
+                <div>
+                  <strong>Acompanhe o financeiro</strong>
+                  <small>Faturamento, comissões e despesas.</small>
+                </div>
+              </div>
+              <div class="product-flow__item">
+                <span>04</span>
+                <div>
+                  <strong>Decida com clareza</strong>
+                  <small>Relatórios prontos para orientar crescimento.</small>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="product-showcase__visual" aria-label="Prévia da interface do PEGASUS">
+            <div class="product-dashboard">
+              <div class="product-dashboard__topbar">
+                <div>
+                  <span></span>
+                  <strong>Operação de hoje</strong>
+                </div>
+                <small>Atualizado agora</small>
+              </div>
+
+              <div class="product-dashboard__metrics">
+                <article>
+                  <span>Ocupação</span>
+                  <strong>94%</strong>
+                  <small>agenda produtiva</small>
+                </article>
+                <article>
+                  <span>Faturamento</span>
+                  <strong>R$ 4.280</strong>
+                  <small>esta semana</small>
+                </article>
+                <article>
+                  <span>Pendências</span>
+                  <strong>3</strong>
+                  <small>confirmações</small>
+                </article>
+              </div>
+
+              <div class="product-dashboard__body">
+                <div class="schedule-panel">
+                  <div class="panel-heading">
+                    <span>Agenda inteligente</span>
+                    <strong>Quinta-feira</strong>
+                  </div>
+
+                  <div class="appointment is-confirmed">
+                    <time>09:30</time>
+                    <div>
+                      <strong>Corte + barba</strong>
+                      <small>Rafael Martins · Confirmado</small>
+                    </div>
+                  </div>
+                  <div class="appointment">
+                    <time>11:00</time>
+                    <div>
+                      <strong>Coloração</strong>
+                      <small>Camila Rocha · Aguardando</small>
+                    </div>
+                  </div>
+                  <div class="appointment is-soft">
+                    <time>14:20</time>
+                    <div>
+                      <strong>Design de sobrancelhas</strong>
+                      <small>Marina Alves · Reagendado</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="insight-panel">
+                  <div class="panel-heading">
+                    <span>Financeiro</span>
+                    <strong>Fluxo sob controle</strong>
+                  </div>
+
+                  <div class="finance-row">
+                    <span>Serviços</span>
+                    <strong>72%</strong>
+                    <i style="--size: 72%"></i>
+                  </div>
+                  <div class="finance-row">
+                    <span>Produtos</span>
+                    <strong>18%</strong>
+                    <i style="--size: 18%"></i>
+                  </div>
+                  <div class="finance-row">
+                    <span>Comissões</span>
+                    <strong>10%</strong>
+                    <i style="--size: 10%"></i>
+                  </div>
+
+                  <div class="automation-note">
+                    <span>Automação ativa</span>
+                    <p>12 lembretes enviados sem intervenção manual.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

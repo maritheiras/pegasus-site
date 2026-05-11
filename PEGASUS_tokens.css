@@ -18,7 +18,7 @@
   --color-danger: #A96F68;
   --color-info: #71818C;
 
-  --container-xl: 1200px;
+  --container-xl: 1440px;
   --container-lg: 1080px;
   --container-md: 860px;
   --container-text: 640px;
@@ -59,7 +59,7 @@
   --type-button: 15px;
 
   --section-y: 140px;
-  --page-x: 48px;
+  --page-x: 24px;
 }
 
 @media (max-width: 1024px) {
@@ -69,7 +69,7 @@
     --type-h2: 38px;
     --type-h3: 28px;
     --section-y: 112px;
-    --page-x: 32px;
+    --page-x: 20px;
   }
 }
 
@@ -84,7 +84,7 @@
     --type-small: 13px;
     --type-label: 10px;
     --section-y: 84px;
-    --page-x: 20px;
+    --page-x: 16px;
   }
 }
 
