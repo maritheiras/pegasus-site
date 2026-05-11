@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PEGASUS - Gestão premium para negócios de beleza</title>
+    <title>Pegasus - Gestão premium para negócios de beleza</title>
     <meta
       name="description"
       content="Agenda, finanças e operação em um único sistema para salões, barbearias e negócios de autocuidado."
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +25,13 @@
     <header class="site-header" aria-label="Navegação principal">
       <div class="site-header__left">
         <a class="site-header__brand" href="#" aria-label="PEGASUS">
-          <img src="assets/pegasus-logo-white.png" alt="PEGASUS" />
+          <img class="site-header__brand-base" src="assets/pegasus-logo-static.png" alt="PEGASUS" />
+          <img
+            class="site-header__brand-wing"
+            src="assets/pegasus-logo-wing.png"
+            alt=""
+            aria-hidden="true"
+          />
         </a>
 
         <nav class="site-header__nav" aria-label="Seções do site">
@@ -65,12 +75,9 @@
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
-      <img
-        class="hero__background"
-        src="assets/hero-landscape.png"
-        alt=""
-        aria-hidden="true"
-      />
+      <div class="hero__shader-stage" aria-hidden="true">
+        <canvas class="hero__shader" data-shader-gradient></canvas>
+      </div>
       <div class="hero__shade" aria-hidden="true"></div>
 
       <div class="hero__shell">
@@ -108,23 +115,23 @@
           <div class="operation-strip__item">
             <span>Hoje</span>
             <div class="operation-strip__metric">
-              <strong>94% de ocupação</strong>
-              <small>+12%</small>
+              <strong><span class="count-up" data-count-to="94" data-count-suffix="%">0%</span> de ocupação</strong>
+              <small><span class="count-up" data-count-to="12" data-count-prefix="+" data-count-suffix="%">+0%</span></small>
             </div>
             <div class="operation-strip__bar" style="--value: 94%"></div>
           </div>
           <div class="operation-strip__item">
             <span>Semana</span>
             <div class="operation-strip__metric">
-              <strong>R$ 4.280 faturados</strong>
-              <small>7 dias</small>
+              <strong><span class="count-up" data-count-to="4280" data-count-prefix="R$ " data-count-format="pt-BR">R$ 0</span> faturados</strong>
+              <small><span class="count-up" data-count-to="7">0</span> dias</small>
             </div>
             <div class="operation-strip__bar" style="--value: 76%"></div>
           </div>
           <div class="operation-strip__item">
             <span>Agenda</span>
             <div class="operation-strip__metric">
-              <strong>3 confirmações pendentes</strong>
+              <strong><span class="count-up" data-count-to="3">0</span> confirmações pendentes</strong>
               <small>agora</small>
             </div>
             <div class="operation-strip__bar" style="--value: 48%"></div>
@@ -232,17 +239,17 @@
               <div class="product-dashboard__metrics">
                 <article>
                   <span>Ocupação</span>
-                  <strong>94%</strong>
+                  <strong><span class="count-up" data-count-to="94" data-count-suffix="%">0%</span></strong>
                   <small>agenda produtiva</small>
                 </article>
                 <article>
                   <span>Faturamento</span>
-                  <strong>R$ 4.280</strong>
+                  <strong><span class="count-up" data-count-to="4280" data-count-prefix="R$ " data-count-format="pt-BR">R$ 0</span></strong>
                   <small>esta semana</small>
                 </article>
                 <article>
                   <span>Pendências</span>
-                  <strong>3</strong>
+                  <strong><span class="count-up" data-count-to="3">0</span></strong>
                   <small>confirmações</small>
                 </article>
               </div>
@@ -285,23 +292,23 @@
 
                   <div class="finance-row">
                     <span>Serviços</span>
-                    <strong>72%</strong>
-                    <i style="--size: 72%"></i>
+                    <strong><span class="count-up" data-count-to="72" data-count-suffix="%">0%</span></strong>
+                    <i class="finance-row__bar" style="--size: 72%"></i>
                   </div>
                   <div class="finance-row">
                     <span>Produtos</span>
-                    <strong>18%</strong>
-                    <i style="--size: 18%"></i>
+                    <strong><span class="count-up" data-count-to="18" data-count-suffix="%">0%</span></strong>
+                    <i class="finance-row__bar" style="--size: 18%"></i>
                   </div>
                   <div class="finance-row">
                     <span>Comissões</span>
-                    <strong>10%</strong>
-                    <i style="--size: 10%"></i>
+                    <strong><span class="count-up" data-count-to="10" data-count-suffix="%">0%</span></strong>
+                    <i class="finance-row__bar" style="--size: 10%"></i>
                   </div>
 
                   <div class="automation-note">
                     <span>Automação ativa</span>
-                    <p>12 lembretes enviados sem intervenção manual.</p>
+                    <p><span class="count-up" data-count-to="12">0</span> lembretes enviados sem intervenção manual.</p>
                   </div>
                 </div>
               </div>
@@ -311,11 +318,55 @@
       </div>
     </section>
 
+    <script src="shader-hero.js"></script>
     <script>
       const header = document.querySelector(".site-header");
       const menuButton = document.querySelector(".site-header__menu-button");
       const mobileMenu = document.querySelector(".mobile-menu");
+      const countUpItems = document.querySelectorAll(".count-up");
       const desktopQuery = window.matchMedia("(min-width: 901px)");
+      const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      function formatCountValue(value, item) {
+        const prefix = item.dataset.countPrefix || "";
+        const suffix = item.dataset.countSuffix || "";
+        const roundedValue = Math.round(value);
+        const formattedValue =
+          item.dataset.countFormat === "pt-BR"
+            ? roundedValue.toLocaleString("pt-BR")
+            : String(roundedValue);
+
+        return `${prefix}${formattedValue}${suffix}`;
+      }
+
+      function animateCountUp(item) {
+        const target = Number(item.dataset.countTo || 0);
+
+        if (!Number.isFinite(target)) {
+          return;
+        }
+
+        if (reducedMotionQuery.matches) {
+          item.textContent = formatCountValue(target, item);
+          return;
+        }
+
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function updateValue(now) {
+          const elapsed = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - elapsed, 3);
+
+          item.textContent = formatCountValue(target * eased, item);
+
+          if (elapsed < 1) {
+            requestAnimationFrame(updateValue);
+          }
+        }
+
+        requestAnimationFrame(updateValue);
+      }
 
       function updateHeaderState() {
         header.classList.toggle("is-scrolled", window.scrollY > 16);
@@ -332,6 +383,7 @@
       }
 
       updateHeaderState();
+      countUpItems.forEach(animateCountUp);
       window.addEventListener("scroll", updateHeaderState, { passive: true });
       menuButton.addEventListener("click", () => {
         updateMenuState(!header.classList.contains("is-menu-open"));
