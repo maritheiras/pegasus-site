@@ -6,10 +6,10 @@
   }
 
   const settings = {
-    brightness: 1.02,
-    color1: [0.2588, 0.2314, 0.2078],
-    color2: [0.8353, 0.6784, 0.4863],
-    color3: [0.5922, 0.5333, 0.4745],
+    brightness: 0.98,
+    color1: [0.3725, 0.349, 0.3294],
+    color2: [0.8392, 0.7059, 0.5608],
+    color3: [0.6549, 0.6196, 0.5961],
     frameRate: 10,
     pixelDensity: 1,
     positionX: -1.4,

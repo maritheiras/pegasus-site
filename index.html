@@ -8,6 +8,24 @@
       name="description"
       content="Agenda, finanças e operação em um único sistema para salões, barbearias e negócios de autocuidado."
     />
+    <meta name="theme-color" content="#0D0D0D" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Pegasus" />
+    <meta property="og:title" content="Pegasus - Gestão premium para negócios de beleza" />
+    <meta
+      property="og:description"
+      content="Agenda, finanças e operação em um único sistema para salões, barbearias e negócios de autocuidado."
+    />
+    <meta property="og:image" content="assets/pegasus-logo-black-full.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pegasus - Gestão premium para negócios de beleza" />
+    <meta
+      name="twitter:description"
+      content="Agenda, finanças e operação em um único sistema para salões, barbearias e negócios de autocuidado."
+    />
+    <meta name="twitter:image" content="assets/pegasus-logo-black-full.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
@@ -25,10 +43,22 @@
     <header class="site-header" aria-label="Navegação principal">
       <div class="site-header__left">
         <a class="site-header__brand" href="#" aria-label="PEGASUS">
-          <img class="site-header__brand-base" src="assets/pegasus-logo-static.png" alt="PEGASUS" />
+          <img class="site-header__brand-base site-header__brand-base--dark" src="assets/pegasus-logo-static.png" alt="PEGASUS" />
           <img
-            class="site-header__brand-wing"
+            class="site-header__brand-base site-header__brand-base--light"
+            src="assets/pegasus-logo-black.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="site-header__brand-wing site-header__brand-wing--dark"
             src="assets/pegasus-logo-wing.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="site-header__brand-wing site-header__brand-wing--light"
+            src="assets/pegasus-logo-wing-black.png"
             alt=""
             aria-hidden="true"
           />
@@ -101,9 +131,6 @@
             <a class="pg-button pg-button-primary hero__primary" href="#comecar">
               Começar gratuitamente
             </a>
-            <a class="pg-button hero__secondary" href="#demonstracao">
-              Ver uma demonstração
-            </a>
           </div>
 
           <p class="hero__support">
@@ -165,18 +192,18 @@
           <div class="product-section__features" id="beneficios">
             <article>
               <span>01</span>
-              <strong>Agenda que funciona por você</strong>
-              <p>Visualize horários, equipe e confirmações sem depender de conversas soltas.</p>
+              <strong>Controle total da operação</strong>
+              <p>Tudo o que acontece no seu negócio, visível em um só lugar.</p>
             </article>
             <article>
               <span>02</span>
-              <strong>Finanças sem surpresa</strong>
-              <p>Entradas, despesas e comissões aparecem em tempo real, com clareza.</p>
+              <strong>Agenda que funciona por você</strong>
+              <p>Confirmações automáticas, lembretes inteligentes e zero falhas de comunicação.</p>
             </article>
             <article>
               <span>03</span>
-              <strong>Automação com precisão</strong>
-              <p>Lembretes, confirmações e follow-ups mantêm sua operação em movimento.</p>
+              <strong>Finanças sem surpresas</strong>
+              <p>Entradas, saídas e tendências em tempo real, sem decisões no escuro.</p>
             </article>
           </div>
         </div>
@@ -187,8 +214,9 @@
               <span class="product-showcase__label">Sistema PEGASUS</span>
               <h3>Menos WhatsApp. Mais negócio.</h3>
               <p>
-                O que antes ficava espalhado entre mensagens, planilhas e memória agora aparece
-                em um fluxo único, claro e confiável.
+                Quantas horas você perde por semana respondendo mensagens, confirmando horários
+                à mão e tentando lembrar o que ficou pendente? O Pegasus automatiza o que consome
+                seu tempo para que você invista onde realmente importa.
               </p>
             </div>
 
@@ -198,7 +226,7 @@
               <button class="product-flow__item is-active" type="button" data-product-step="0" aria-current="step">
                 <span>01</span>
                 <div>
-                  <strong>Organize a agenda</strong>
+                  <strong>Agenda inteligente</strong>
                   <small>Dia, semana, profissional e capacidade.</small>
                   <i class="product-flow__progress" aria-hidden="true"></i>
                 </div>
@@ -206,24 +234,24 @@
               <button class="product-flow__item" type="button" data-product-step="1">
                 <span>02</span>
                 <div>
-                  <strong>Confirme automaticamente</strong>
-                  <small>Menos faltas, menos mensagens manuais.</small>
+                  <strong>Confirmação de agendamentos</strong>
+                  <small>Notificações inteligentes que reduzem faltas.</small>
                   <i class="product-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
               <button class="product-flow__item" type="button" data-product-step="2">
                 <span>03</span>
                 <div>
-                  <strong>Acompanhe o financeiro</strong>
-                  <small>Faturamento, comissões e despesas.</small>
+                  <strong>Gestão financeira</strong>
+                  <small>Faturamento, comissões, despesas e relatórios.</small>
                   <i class="product-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
               <button class="product-flow__item" type="button" data-product-step="3">
                 <span>04</span>
                 <div>
-                  <strong>Decida com clareza</strong>
-                  <small>Relatórios prontos para orientar crescimento.</small>
+                  <strong>Relatórios e insights</strong>
+                  <small>Dados que orientam decisões reais.</small>
                   <i class="product-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
@@ -477,29 +505,29 @@
           <div class="insights-section__headline">
             <span class="product-kicker">
               <span class="signal-dot signal-dot--sand" aria-hidden="true"></span>
-              Inteligência aplicada
+              Relatórios e insights
             </span>
             <h2 id="insights-title">
-              <span>Melhore a operação</span>
-              <span>sem adivinhar.</span>
+              <span>Dados que orientam</span>
+              <span>decisões reais.</span>
             </h2>
           </div>
 
           <div class="insights-section__features">
             <article>
               <span>01</span>
-              <strong>Previsão de agenda</strong>
-              <p>Identifique horários com maior chance de ocupação antes que eles fiquem vazios.</p>
+              <strong>Dias mais movimentados</strong>
+              <p>Entenda quando sua agenda exige mais equipe, atenção e preparo.</p>
             </article>
             <article>
               <span>02</span>
-              <strong>Ações sugeridas</strong>
-              <p>Receba próximos passos com base no histórico real do seu salão ou barbearia.</p>
+              <strong>Serviços mais rentáveis</strong>
+              <p>Veja o que traz margem real, não apenas movimento.</p>
             </article>
             <article>
               <span>03</span>
-              <strong>Melhoria contínua</strong>
-              <p>Transforme cada semana em aprendizado para atendimento, agenda e financeiro.</p>
+              <strong>Clientes mais frequentes</strong>
+              <p>Construa relações sobre memória, não suposição.</p>
             </article>
           </div>
         </div>
@@ -565,46 +593,46 @@
 
           <aside class="insights-showcase__rail">
             <div>
-              <span class="product-showcase__label">Recomendações Pegasus</span>
-              <h3>O sistema aponta o que merece atenção antes de virar problema.</h3>
+              <span class="product-showcase__label">Visão para crescer</span>
+              <h3>Saiba exatamente onde está e para onde vai.</h3>
               <p>
-                Sugestões simples, acionáveis e conectadas à rotina real: agenda, confirmação,
-                margem e decisões aparecem com contexto.
+                Dias mais movimentados, serviços mais rentáveis, clientes mais frequentes.
+                O Pegasus transforma rotina em clareza para orientar decisões reais.
               </p>
             </div>
 
-            <a class="product-showcase__button" href="#comecar">Receber sugestões</a>
+            <a class="product-showcase__button" href="#comecar">Ver relatório completo</a>
 
             <div class="insight-flow" aria-label="Fluxo de sugestões inteligentes" data-insight-flow>
               <button class="insight-flow__item is-active" type="button" data-insight-step="0" aria-current="step">
                 <span>01</span>
                 <div>
-                  <strong>Ocupe horários vazios</strong>
-                  <small>Sugestões para preencher janelas sem mexer na rotina.</small>
+                  <strong>Nenhum horário perdido</strong>
+                  <small>Identifique janelas com potencial antes que o dia passe.</small>
                   <i class="insight-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
               <button class="insight-flow__item" type="button" data-insight-step="1">
                 <span>02</span>
                 <div>
-                  <strong>Reduza faltas</strong>
-                  <small>Ajustes finos em lembretes e confirmações automáticas.</small>
+                  <strong>Clientes chegam</strong>
+                  <small>Confirmações e lembretes mantêm a agenda produtiva.</small>
                   <i class="insight-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
               <button class="insight-flow__item" type="button" data-insight-step="2">
                 <span>03</span>
                 <div>
-                  <strong>Proteja sua margem</strong>
-                  <small>Alertas sobre serviços, produtos e comissões.</small>
+                  <strong>Cada centavo visível</strong>
+                  <small>Entradas, saídas, comissões e margem em tempo real.</small>
                   <i class="insight-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
               <button class="insight-flow__item" type="button" data-insight-step="3">
                 <span>04</span>
                 <div>
-                  <strong>Priorize decisões</strong>
-                  <small>Resumo executivo para saber por onde começar.</small>
+                  <strong>Nenhuma decisão no escuro</strong>
+                  <small>Relatórios prontos para agir com clareza.</small>
                   <i class="insight-flow__progress" aria-hidden="true"></i>
                 </div>
               </button>
@@ -746,11 +774,174 @@
       </div>
     </section>
 
+    <section class="spotlight-section" aria-labelledby="spotlight-title">
+      <div class="pg-container">
+        <div class="spotlight-section__headline">
+          <span class="spotlight-kicker">
+            <span class="signal-dot signal-dot--sand" aria-hidden="true"></span>
+            Prova e autoridade
+          </span>
+          <h2 id="spotlight-title">
+            <span>A confiança de quem</span>
+            <span>já opera com clareza.</span>
+          </h2>
+        </div>
+
+        <article class="spotlight-card">
+          <div class="spotlight-card__visual" aria-label="Resultado de um salão usando o Pegasus">
+            <div class="spotlight-card__brand">
+              <strong>Pegasus</strong>
+              <span>estrutura para negócios de beleza</span>
+            </div>
+
+            <div class="spotlight-card__metrics" aria-label="Indicadores do caso de uso">
+              <div>
+                <span>Profissionais</span>
+                <strong><span class="count-up" data-count-to="2000" data-count-prefix="+" data-count-format="pt-BR">+0</span></strong>
+              </div>
+              <div>
+                <span>Uptime</span>
+                <strong><span class="count-up" data-count-to="99" data-count-suffix=".9%">0%</span></strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-card__content">
+            <div class="spotlight-card__logo">
+              <img src="assets/pegasus-logo-black-full.png" alt="Pegasus" />
+            </div>
+
+            <h3>Desenvolvido com base no dia a dia real de profissionais de beleza.</h3>
+
+            <a class="spotlight-card__button" href="#comecar">Criar minha conta</a>
+
+            <div class="spotlight-person">
+              <div aria-hidden="true">SP</div>
+              <p>
+                <strong>Proprietária de salão</strong>
+                <span>São Paulo</span>
+              </p>
+            </div>
+
+            <blockquote>
+              “Antes do Pegasus, minha semana era gerenciar o caos. Agora eu gerencio um negócio.”
+            </blockquote>
+
+            <div class="spotlight-card__results">
+              <article>
+                <span>Suporte</span>
+                <strong>Português</strong>
+              </article>
+              <article>
+                <span>Dados</span>
+                <strong>Seguros</strong>
+              </article>
+              <article>
+                <span>Privacidade</span>
+                <strong>LGPD</strong>
+              </article>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta-section" id="comecar" aria-labelledby="final-cta-title">
+      <div class="pg-container final-cta-section__inner">
+        <div class="final-cta-section__headline">
+          <span class="spotlight-kicker">
+            <span class="signal-dot signal-dot--sand" aria-hidden="true"></span>
+            Próximo passo
+          </span>
+          <h2 id="final-cta-title">
+            <span>Pronto para operar</span>
+            <span>sem limite.</span>
+          </h2>
+        </div>
+
+        <div class="final-cta-section__aside">
+          <p>
+            Você chegou até aqui porque sabe que o seu negócio pode funcionar melhor.
+            O Pegasus é o próximo passo. Simples assim.
+          </p>
+
+          <div class="final-cta-section__actions" aria-label="Ações finais">
+            <a class="final-cta-section__primary" href="#criar-conta">Criar minha conta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-cta-section__effect" aria-hidden="true">
+        <span class="final-cta-section__wordmark">
+          <span>PEG</span><span class="final-cta-section__wordmark-a"></span><span>SUS</span>
+        </span>
+      </div>
+    </section>
+
+    <footer class="site-footer" aria-label="Rodapé do site">
+      <div class="pg-container site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/pegasus-logo-black-full.png" alt="PEGASUS" />
+          <p>
+            Agenda, finanças e operação em um único sistema para quem leva beleza
+            e autocuidado a sério.
+          </p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Links do rodapé">
+          <div>
+            <span>Produto</span>
+            <a href="#produto">Visão geral</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#demonstracao">Demonstração</a>
+          </div>
+          <div>
+            <span>Negócios</span>
+            <a href="#comecar">Começar agora</a>
+            <a href="#entrar">Entrar</a>
+            <a href="#criar-conta">Criar conta</a>
+          </div>
+          <div>
+            <span>Contato</span>
+            <a href="mailto:contato@pegasus.app">contato@pegasus.app</a>
+            <a href="#especialista">Falar com especialista</a>
+            <a href="#privacidade">Privacidade</a>
+          </div>
+        </nav>
+
+        <div class="site-footer__bottom">
+          <span>© 2026 Pegasus. Todos os direitos reservados.</span>
+          <div class="site-footer__social" aria-label="Redes sociais">
+            <a href="#instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4.5" y="4.5" width="15" height="15" rx="4.2"></rect>
+                <circle cx="12" cy="12" r="3.6"></circle>
+                <circle cx="16.8" cy="7.2" r="0.9"></circle>
+              </svg>
+            </a>
+            <a href="#x" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 5l14 14M19 5L5 19"></path>
+              </svg>
+            </a>
+            <a href="#youtube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.8" y="6.8" width="16.4" height="10.4" rx="3"></rect>
+                <path d="M10.2 9.4v5.2l4.8-2.6-4.8-2.6z"></path>
+              </svg>
+            </a>
+          </div>
+          <span>Feito para salões, barbearias e estúdios de beleza.</span>
+        </div>
+      </div>
+    </footer>
+
     <script src="shader-hero.js"></script>
     <script>
       const header = document.querySelector(".site-header");
       const menuButton = document.querySelector(".site-header__menu-button");
       const mobileMenu = document.querySelector(".mobile-menu");
+      const lightSections = document.querySelectorAll(".spotlight-section, .final-cta-section, .site-footer");
       const productVisual = document.querySelector(".product-showcase__visual");
       const productPreview = document.querySelector("[data-product-preview]");
       const productFlowItems = document.querySelectorAll("[data-product-step]");
@@ -964,7 +1155,16 @@
       }
 
       function updateHeaderState() {
+        const headerRect = header.getBoundingClientRect();
+        const probeY = headerRect.top + headerRect.height / 2;
+        const isOnLight = Array.from(lightSections).some((section) => {
+          const sectionRect = section.getBoundingClientRect();
+
+          return sectionRect.top <= probeY && sectionRect.bottom >= probeY;
+        });
+
         header.classList.toggle("is-scrolled", window.scrollY > 16);
+        header.classList.toggle("is-on-light", isOnLight);
       }
 
       function updateMenuState(isOpen) {
@@ -990,6 +1190,7 @@
       });
       restartInsightTimer();
       window.addEventListener("scroll", updateHeaderState, { passive: true });
+      window.addEventListener("resize", updateHeaderState);
       menuButton.addEventListener("click", () => {
         updateMenuState(!header.classList.contains("is-menu-open"));
       });
