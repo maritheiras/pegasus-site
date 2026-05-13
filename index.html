@@ -471,6 +471,281 @@
       </div>
     </section>
 
+    <section class="insights-section" aria-labelledby="insights-title">
+      <div class="pg-container">
+        <div class="insights-section__intro">
+          <div class="insights-section__headline">
+            <span class="product-kicker">
+              <span class="signal-dot signal-dot--sand" aria-hidden="true"></span>
+              Inteligência aplicada
+            </span>
+            <h2 id="insights-title">
+              <span>Melhore a operação</span>
+              <span>sem adivinhar.</span>
+            </h2>
+          </div>
+
+          <div class="insights-section__features">
+            <article>
+              <span>01</span>
+              <strong>Previsão de agenda</strong>
+              <p>Identifique horários com maior chance de ocupação antes que eles fiquem vazios.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>Ações sugeridas</strong>
+              <p>Receba próximos passos com base no histórico real do seu salão ou barbearia.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>Melhoria contínua</strong>
+              <p>Transforme cada semana em aprendizado para atendimento, agenda e financeiro.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="insights-showcase">
+          <div class="insights-showcase__visual insights-showcase__visual--slots" aria-label="Sugestões inteligentes do PEGASUS">
+            <div class="insight-preview insight-preview--slots" data-insight-preview aria-live="polite">
+              <div class="insight-preview__topbar">
+                <div>
+                  <span></span>
+                  <strong>Ocupação inteligente</strong>
+                </div>
+                <small>Próximos 7 dias</small>
+              </div>
+
+              <div class="insight-slots">
+                <section class="insight-focus-card">
+                  <span>Horário com potencial</span>
+                  <strong><span class="count-up" data-count-to="16" data-count-suffix=":00">0:00</span></strong>
+                  <small>quinta-feira, Rafael Martins</small>
+                  <i style="--size: 78%"></i>
+                </section>
+
+                <section class="insight-suggestion-list">
+                  <div>
+                    <span>Cliente sugerida</span>
+                    <strong>Marina Alves</strong>
+                    <small>corte + sobrancelha</small>
+                  </div>
+                  <div>
+                    <span>Chance de confirmação</span>
+                    <strong><span class="count-up" data-count-to="82" data-count-suffix="%">0%</span></strong>
+                    <small>baseada no histórico</small>
+                  </div>
+                  <div>
+                    <span>Impacto previsto</span>
+                    <strong><span class="count-up" data-count-to="180" data-count-prefix="+R$ ">+R$ 0</span></strong>
+                    <small>sem abrir novo turno</small>
+                  </div>
+                </section>
+
+                <section class="insight-week">
+                  <div class="is-low">
+                    <span>Seg</span>
+                    <i></i>
+                  </div>
+                  <div>
+                    <span>Ter</span>
+                    <i></i>
+                  </div>
+                  <div class="is-hot">
+                    <span>Qui</span>
+                    <i></i>
+                  </div>
+                  <div>
+                    <span>Sex</span>
+                    <i></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <aside class="insights-showcase__rail">
+            <div>
+              <span class="product-showcase__label">Recomendações Pegasus</span>
+              <h3>O sistema aponta o que merece atenção antes de virar problema.</h3>
+              <p>
+                Sugestões simples, acionáveis e conectadas à rotina real: agenda, confirmação,
+                margem e decisões aparecem com contexto.
+              </p>
+            </div>
+
+            <a class="product-showcase__button" href="#comecar">Receber sugestões</a>
+
+            <div class="insight-flow" aria-label="Fluxo de sugestões inteligentes" data-insight-flow>
+              <button class="insight-flow__item is-active" type="button" data-insight-step="0" aria-current="step">
+                <span>01</span>
+                <div>
+                  <strong>Ocupe horários vazios</strong>
+                  <small>Sugestões para preencher janelas sem mexer na rotina.</small>
+                  <i class="insight-flow__progress" aria-hidden="true"></i>
+                </div>
+              </button>
+              <button class="insight-flow__item" type="button" data-insight-step="1">
+                <span>02</span>
+                <div>
+                  <strong>Reduza faltas</strong>
+                  <small>Ajustes finos em lembretes e confirmações automáticas.</small>
+                  <i class="insight-flow__progress" aria-hidden="true"></i>
+                </div>
+              </button>
+              <button class="insight-flow__item" type="button" data-insight-step="2">
+                <span>03</span>
+                <div>
+                  <strong>Proteja sua margem</strong>
+                  <small>Alertas sobre serviços, produtos e comissões.</small>
+                  <i class="insight-flow__progress" aria-hidden="true"></i>
+                </div>
+              </button>
+              <button class="insight-flow__item" type="button" data-insight-step="3">
+                <span>04</span>
+                <div>
+                  <strong>Priorize decisões</strong>
+                  <small>Resumo executivo para saber por onde começar.</small>
+                  <i class="insight-flow__progress" aria-hidden="true"></i>
+                </div>
+              </button>
+            </div>
+          </aside>
+        </div>
+
+        <template data-insight-template="1">
+          <div class="insight-preview__topbar">
+            <div>
+              <span></span>
+              <strong>Confirmação preventiva</strong>
+            </div>
+            <small>Próximas 24h</small>
+          </div>
+
+          <div class="insight-confirm">
+            <section class="confirm-risk-card">
+              <span>Risco de falta</span>
+              <strong><span class="count-up" data-count-to="18" data-count-suffix="%">0%</span></strong>
+              <small>redução prevista com reforço automático</small>
+              <div class="risk-track" aria-hidden="true">
+                <i style="--size: 32%"></i>
+                <i style="--size: 74%"></i>
+              </div>
+            </section>
+
+            <section class="message-preview">
+              <span>Mensagem sugerida</span>
+              <p>Olá, Ana. Podemos confirmar seu horário de amanhã às 10:30?</p>
+              <div>
+                <button type="button">Confirmar</button>
+                <button type="button">Reagendar</button>
+              </div>
+            </section>
+
+            <section class="confirm-stack">
+              <article>
+                <strong>12 clientes</strong>
+                <small>recebem lembrete refinado</small>
+              </article>
+              <article>
+                <strong>3 encaixes</strong>
+                <small>podem ser liberados se não houver resposta</small>
+              </article>
+            </section>
+          </div>
+        </template>
+
+        <template data-insight-template="2">
+          <div class="insight-preview__topbar">
+            <div>
+              <span></span>
+              <strong>Margem protegida</strong>
+            </div>
+            <small>Semana atual</small>
+          </div>
+
+          <div class="insight-margin">
+            <section class="margin-main">
+              <span>Prioridade financeira</span>
+              <strong>R$ <span class="count-up" data-count-to="860">0</span></strong>
+              <small>comissões acompanhadas em tempo real</small>
+              <div class="margin-bars" aria-hidden="true">
+                <i style="--height: 48%"></i>
+                <i style="--height: 62%"></i>
+                <i style="--height: 38%"></i>
+                <i style="--height: 76%"></i>
+              </div>
+            </section>
+
+            <section class="margin-grid">
+              <article>
+                <span>Serviços</span>
+                <strong><span class="count-up" data-count-to="72" data-count-suffix="%">0%</span></strong>
+              </article>
+              <article>
+                <span>Produtos</span>
+                <strong><span class="count-up" data-count-to="18" data-count-suffix="%">0%</span></strong>
+              </article>
+              <article>
+                <span>Despesas</span>
+                <strong>R$ <span class="count-up" data-count-to="390">0</span></strong>
+              </article>
+              <article>
+                <span>Margem</span>
+                <strong><span class="count-up" data-count-to="41" data-count-suffix="%">0%</span></strong>
+              </article>
+            </section>
+
+            <section class="margin-note">
+              <span>Sugestão</span>
+              <p>Priorize pacotes de maior margem nos horários com maior procura.</p>
+            </section>
+          </div>
+        </template>
+
+        <template data-insight-template="3">
+          <div class="insight-preview__topbar">
+            <div>
+              <span></span>
+              <strong>Prioridades do gestor</strong>
+            </div>
+            <small>Atualizado agora</small>
+          </div>
+
+          <div class="insight-clarity">
+            <section class="clarity-score">
+              <span>Saúde da operação</span>
+              <strong><span class="count-up" data-count-to="91" data-count-suffix="%">0%</span></strong>
+              <small>agenda, retorno e faturamento alinhados</small>
+            </section>
+
+            <section class="clarity-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <strong>Abrir agenda de sexta</strong>
+                  <small>demanda reprimida no período da tarde</small>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <strong>Reativar 8 clientes</strong>
+                  <small>sem retorno há mais de 45 dias</small>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <strong>Revisar comissão</strong>
+                  <small>produto com margem abaixo do padrão</small>
+                </div>
+              </article>
+            </section>
+          </div>
+        </template>
+      </div>
+    </section>
+
     <script src="shader-hero.js"></script>
     <script>
       const header = document.querySelector(".site-header");
@@ -480,9 +755,14 @@
       const productPreview = document.querySelector("[data-product-preview]");
       const productFlowItems = document.querySelectorAll("[data-product-step]");
       const productTemplates = document.querySelectorAll("[data-product-template]");
+      const insightVisual = document.querySelector(".insights-showcase__visual");
+      const insightPreview = document.querySelector("[data-insight-preview]");
+      const insightFlowItems = document.querySelectorAll("[data-insight-step]");
+      const insightTemplates = document.querySelectorAll("[data-insight-template]");
       const desktopQuery = window.matchMedia("(min-width: 901px)");
       const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
       const productFlowDuration = 12000;
+      const insightFlowDuration = 12000;
       const productPanelThemes = [
         "product-dashboard--agenda",
         "product-dashboard--confirm",
@@ -495,10 +775,26 @@
         "product-showcase__visual--finance",
         "product-showcase__visual--report",
       ];
+      const insightPanelThemes = [
+        "insight-preview--slots",
+        "insight-preview--confirm",
+        "insight-preview--margin",
+        "insight-preview--clarity",
+      ];
+      const insightVisualThemes = [
+        "insights-showcase__visual--slots",
+        "insights-showcase__visual--confirm",
+        "insights-showcase__visual--margin",
+        "insights-showcase__visual--clarity",
+      ];
       const initialProductPanel = productPreview ? productPreview.innerHTML : "";
+      const initialInsightPanel = insightPreview ? insightPreview.innerHTML : "";
       let activeProductStep = 0;
+      let activeInsightStep = 0;
       let productFlowTimer;
       let productPanelTimer;
+      let insightFlowTimer;
+      let insightPanelTimer;
 
       function formatCountValue(value, item) {
         const prefix = item.dataset.countPrefix || "";
@@ -606,6 +902,67 @@
         restartProductTimer();
       }
 
+      function getInsightPanel(index) {
+        if (index === 0) {
+          return initialInsightPanel;
+        }
+
+        return insightTemplates[index - 1]?.innerHTML || initialInsightPanel;
+      }
+
+      function restartInsightTimer() {
+        if (!insightFlowItems.length) {
+          return;
+        }
+
+        window.clearTimeout(insightFlowTimer);
+        insightFlowTimer = window.setTimeout(() => {
+          const nextStep = (activeInsightStep + 1) % insightFlowItems.length;
+          setInsightStep(nextStep);
+        }, insightFlowDuration);
+      }
+
+      function renderInsightPanel(index) {
+        if (!insightPreview) {
+          return;
+        }
+
+        window.clearTimeout(insightPanelTimer);
+        insightPreview.classList.add("is-changing");
+
+        insightPanelTimer = window.setTimeout(() => {
+          insightPreview.classList.remove(...insightPanelThemes);
+          insightPreview.classList.add(insightPanelThemes[index]);
+          insightVisual?.classList.remove(...insightVisualThemes);
+          insightVisual?.classList.add(insightVisualThemes[index]);
+          insightPreview.innerHTML = getInsightPanel(index);
+          initCountUps(insightPreview);
+          requestAnimationFrame(() => {
+            insightPreview.classList.remove("is-changing");
+          });
+        }, 140);
+      }
+
+      function setInsightStep(index) {
+        if (!insightFlowItems[index]) {
+          return;
+        }
+
+        activeInsightStep = index;
+
+        insightFlowItems.forEach((item) => {
+          item.classList.remove("is-active");
+          item.removeAttribute("aria-current");
+          item.style.setProperty("--flow-duration", `${insightFlowDuration}ms`);
+        });
+
+        insightFlowItems[index].offsetWidth;
+        insightFlowItems[index].classList.add("is-active");
+        insightFlowItems[index].setAttribute("aria-current", "step");
+        renderInsightPanel(index);
+        restartInsightTimer();
+      }
+
       function updateHeaderState() {
         header.classList.toggle("is-scrolled", window.scrollY > 16);
       }
@@ -627,6 +984,11 @@
         item.addEventListener("click", () => setProductStep(index));
       });
       restartProductTimer();
+      insightFlowItems.forEach((item, index) => {
+        item.style.setProperty("--flow-duration", `${insightFlowDuration}ms`);
+        item.addEventListener("click", () => setInsightStep(index));
+      });
+      restartInsightTimer();
       window.addEventListener("scroll", updateHeaderState, { passive: true });
       menuButton.addEventListener("click", () => {
         updateMenuState(!header.classList.contains("is-menu-open"));
