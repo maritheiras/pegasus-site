@@ -3242,13 +3242,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 .spotlight-card__visual {
   position: relative;
-  display: flex;
   min-height: 520px;
-  flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
   border-radius: var(--radius-sm);
-  padding: 28px;
   background:
     linear-gradient(180deg, rgba(13, 13, 13, 0.1) 0%, rgba(13, 13, 13, 0.08) 42%, rgba(13, 13, 13, 0.68) 100%),
     linear-gradient(135deg, rgba(200, 182, 166, 0.14), rgba(13, 13, 13, 0.16)),
@@ -3265,78 +3261,6 @@ body::-webkit-scrollbar-thumb:hover {
   content: "";
   background: linear-gradient(180deg, rgba(13, 13, 13, 0), rgba(13, 13, 13, 0.72));
   pointer-events: none;
-}
-
-.spotlight-card__brand,
-.spotlight-card__metrics {
-  position: relative;
-  z-index: 1;
-}
-
-.spotlight-card__brand {
-  display: grid;
-  gap: 4px;
-  width: fit-content;
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  background: rgba(13, 13, 13, 0.38);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-}
-
-.spotlight-card__brand strong {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.1;
-}
-
-.spotlight-card__brand span {
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.spotlight-card__metrics {
-  display: grid;
-  max-width: 440px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  align-self: end;
-}
-
-.spotlight-card__metrics div {
-  display: grid;
-  gap: 10px;
-  min-height: 132px;
-  align-content: end;
-  padding: 18px;
-  border-radius: var(--radius-sm);
-  background: rgba(13, 13, 13, 0.34);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-}
-
-.spotlight-card__metrics div > span,
-.spotlight-card__results article > span {
-  color: rgba(13, 13, 13, 0.54);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.spotlight-card__metrics div > span {
-  color: rgba(255, 255, 255, 0.62);
-}
-
-.spotlight-card__metrics strong {
-  color: var(--color-white);
-  font-size: 44px;
-  font-weight: 300;
-  line-height: 1;
 }
 
 .spotlight-card__content {
@@ -3397,16 +3321,21 @@ body::-webkit-scrollbar-thumb:hover {
   border-top: 1px solid rgba(13, 13, 13, 0.1);
 }
 
-.spotlight-person div {
-  display: grid;
+.spotlight-person__photo {
   width: 44px;
   height: 44px;
-  place-items: center;
-  border-radius: var(--radius-sm);
-  color: var(--color-black);
-  background: linear-gradient(135deg, rgba(200, 182, 166, 0.72), rgba(242, 242, 242, 0.94));
-  font-size: 13px;
-  font-weight: 700;
+  overflow: hidden;
+  flex: 0 0 44px;
+  border-radius: 14px;
+  background: rgba(13, 13, 13, 0.06);
+}
+
+.spotlight-person__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .spotlight-person p {
@@ -3432,29 +3361,6 @@ body::-webkit-scrollbar-thumb:hover {
   color: rgba(13, 13, 13, 0.76);
   font-size: 15px;
   line-height: 1.75;
-}
-
-.spotlight-card__results {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.spotlight-card__results article {
-  display: grid;
-  gap: 10px;
-  min-height: 112px;
-  align-content: end;
-  padding: 16px;
-  border-radius: var(--radius-sm);
-  background: rgba(13, 13, 13, 0.045);
-}
-
-.spotlight-card__results strong {
-  color: var(--color-black);
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1;
 }
 
 .final-cta-section {
@@ -4003,10 +3909,6 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 26px;
   }
 
-  .spotlight-card__results {
-    grid-template-columns: 1fr;
-  }
-
   .final-cta-section {
     min-height: 630px;
     padding-block: 92px 0;
@@ -4242,22 +4144,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   .spotlight-card__visual {
     min-height: 420px;
-    padding: 18px;
     background-position: center top;
-  }
-
-  .spotlight-card__metrics {
-    max-width: none;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .spotlight-card__metrics div {
-    min-height: 108px;
-    padding: 14px;
-  }
-
-  .spotlight-card__metrics strong {
-    font-size: 34px;
   }
 
   .spotlight-card__content {
