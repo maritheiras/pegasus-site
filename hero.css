@@ -1489,7 +1489,7 @@ body::-webkit-scrollbar-thumb:hover {
 .mobile-money-grid article {
   display: grid;
   gap: 10px;
-  min-height: 92px;
+  min-height: 84px;
   padding: 14px;
 }
 
@@ -1560,13 +1560,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 .mobile-insight-list article {
   display: grid;
-  gap: 8px;
-  padding: 14px;
+  gap: 6px;
+  padding: 12px 14px;
 }
 
 .mobile-insight-list strong {
   color: rgba(255, 255, 255, 0.86);
   font-weight: 500;
+  line-height: 1.35;
 }
 
 .product-dashboard__metrics {
@@ -3248,7 +3249,7 @@ body::-webkit-scrollbar-thumb:hover {
   background:
     linear-gradient(180deg, rgba(13, 13, 13, 0.1) 0%, rgba(13, 13, 13, 0.08) 42%, rgba(13, 13, 13, 0.68) 100%),
     linear-gradient(135deg, rgba(200, 182, 166, 0.14), rgba(13, 13, 13, 0.16)),
-    url("assets/product-sky-birds.png") center / cover;
+    url("assets/spotlight-salon-founder.png") center / cover;
   color: var(--color-white);
 }
 
@@ -3663,6 +3664,7 @@ body::-webkit-scrollbar-thumb:hover {
   stroke-width: 1.8;
 }
 
+.site-footer__social a[aria-label="X"] svg path,
 .site-footer__social a[aria-label="YouTube"] svg path {
   fill: currentColor;
   stroke: none;
@@ -4110,10 +4112,10 @@ body::-webkit-scrollbar-thumb:hover {
   .insights-showcase__visual {
     min-height: 452px;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     overflow: hidden;
     border-radius: var(--radius-md);
-    padding: 96px 0 0 12px;
+    padding: 96px 12px 0;
     background-position: center top;
   }
 
@@ -4170,7 +4172,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .product-dashboard {
-    width: min(92vw, 342px);
+    width: min(100%, 342px);
     min-width: 0;
     min-height: auto;
     border-radius: 28px;
@@ -4178,7 +4180,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .insight-preview {
-    width: min(92vw, 342px);
+    width: min(100%, 342px);
     min-width: 0;
     min-height: auto;
     border-radius: 28px;
