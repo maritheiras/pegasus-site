@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pegasusapp.com.br/sitemap.xml
+Sitemap: https://pegasus-site.netlify.app/sitemap.xml
