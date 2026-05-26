@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pegasusapp.com.br/sitemap.xml

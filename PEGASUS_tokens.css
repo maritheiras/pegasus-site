@@ -150,6 +150,60 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+[role="button"],
+[tabindex],
+summary,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+button:focus,
+[role="button"]:focus,
+[tabindex]:focus,
+summary:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid rgba(200, 182, 166, 0.72);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: inherit;
+  background: rgba(200, 182, 166, 0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 button,
 input,
 textarea,

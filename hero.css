@@ -38,6 +38,26 @@ body::-webkit-scrollbar-thumb:hover {
   scroll-margin-top: 96px;
 }
 
+#produto,
+#beneficios,
+#sobre,
+#comecar {
+  scroll-margin-top: 112px;
+}
+
+@media (max-width: 900px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  #produto,
+  #beneficios,
+  #sobre,
+  #comecar {
+    scroll-margin-top: 84px;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
@@ -778,6 +798,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .product-section {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 1200px;
   margin-top: -1px;
   padding-block: 136px 150px;
   color: var(--color-white);
@@ -1049,7 +1071,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .product-showcase__visual {
-  --showcase-image: url("assets/showcase-agenda.png");
+  --showcase-image: url("assets/showcase-agenda.jpg");
 
   position: relative;
   display: flex;
@@ -1067,24 +1089,24 @@ body::-webkit-scrollbar-thumb:hover {
 
 .product-showcase__visual--booking,
 .product-showcase__visual--agenda {
-  --showcase-image: url("assets/showcase-agenda.png");
+  --showcase-image: url("assets/showcase-agenda.jpg");
 }
 
 .product-showcase__visual--services,
 .product-showcase__visual--confirm {
-  --showcase-image: url("assets/showcase-confirm.png");
+  --showcase-image: url("assets/showcase-confirm.jpg");
 }
 
 .product-showcase__visual--team {
-  --showcase-image: url("assets/showcase-report.png");
+  --showcase-image: url("assets/showcase-report.jpg");
 }
 
 .product-showcase__visual--finance {
-  --showcase-image: url("assets/showcase-finance.png");
+  --showcase-image: url("assets/showcase-finance.jpg");
 }
 
 .product-showcase__visual--report {
-  --showcase-image: url("assets/showcase-report.png");
+  --showcase-image: url("assets/showcase-report.jpg");
 }
 
 .product-showcase__visual::before {
@@ -2437,6 +2459,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .insights-section {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 1200px;
   margin-top: -1px;
   padding-block: 0 150px;
   color: var(--color-white);
@@ -2527,7 +2551,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .insights-showcase__visual {
-  --insights-image: url("assets/showcase-agenda.png");
+  --insights-image: url("assets/showcase-agenda.jpg");
 
   position: relative;
   display: flex;
@@ -2544,19 +2568,19 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .insights-showcase__visual--slots {
-  --insights-image: url("assets/showcase-agenda.png");
+  --insights-image: url("assets/showcase-agenda.jpg");
 }
 
 .insights-showcase__visual--confirm {
-  --insights-image: url("assets/showcase-confirm.png");
+  --insights-image: url("assets/showcase-confirm.jpg");
 }
 
 .insights-showcase__visual--margin {
-  --insights-image: url("assets/showcase-finance.png");
+  --insights-image: url("assets/showcase-finance.jpg");
 }
 
 .insights-showcase__visual--clarity {
-  --insights-image: url("assets/showcase-report.png");
+  --insights-image: url("assets/showcase-report.jpg");
 }
 
 .insights-showcase__visual::before {
@@ -3188,6 +3212,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .spotlight-section {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
   margin-top: -1px;
   padding-block: 138px 148px;
   color: var(--color-black);
@@ -3249,7 +3275,7 @@ body::-webkit-scrollbar-thumb:hover {
   background:
     linear-gradient(180deg, rgba(13, 13, 13, 0.1) 0%, rgba(13, 13, 13, 0.08) 42%, rgba(13, 13, 13, 0.68) 100%),
     linear-gradient(135deg, rgba(200, 182, 166, 0.14), rgba(13, 13, 13, 0.16)),
-    url("assets/spotlight-salon-founder.png") center / cover;
+    url("assets/spotlight-salon-founder.jpg") center / cover;
   color: var(--color-white);
 }
 
@@ -3366,6 +3392,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .final-cta-section {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 760px;
   min-height: 760px;
   overflow: hidden;
   padding-block: 128px 0;
@@ -3540,6 +3568,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .site-footer {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 520px;
   z-index: 2;
   color: var(--color-black);
   background:
@@ -4005,8 +4035,10 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .hero__content {
-    width: min(100%, 354px);
+    width: calc(100vw - 44px);
+    max-width: 354px;
     padding: 108px 0 42px;
+    transform: translateX(-8px);
   }
 
   .hero__badge {
@@ -4020,8 +4052,8 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .hero h1 {
-    max-width: 346px;
-    font-size: clamp(42px, 11.6vw, 47px);
+    max-width: 326px;
+    font-size: clamp(39px, 10.8vw, 44px);
     line-height: 1.01;
     text-wrap: balance;
   }
@@ -4035,7 +4067,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .hero__lead {
-    max-width: 336px;
+    max-width: 310px;
     margin-top: 18px;
     font-size: 15px;
     font-weight: 400;
@@ -4045,12 +4077,13 @@ body::-webkit-scrollbar-thumb:hover {
 
   .hero__actions {
     width: 100%;
+    padding-inline: 16px;
     margin-top: 28px;
   }
 
   .hero__actions .pg-button {
-    width: min(100%, 320px);
-    max-width: calc(100vw - 44px);
+    width: min(100%, 280px);
+    max-width: calc(100vw - 92px);
   }
 
   .hero-segments {

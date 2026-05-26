@@ -3,33 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pegasus - Gestão premium para negócios de beleza</title>
+    <title>Pegasus - Aplicativo de agenda e financeiro para beleza</title>
     <meta
       name="description"
-      content="Agenda, finanças e operação em um único aplicativo para salões, barbearias e negócios de autocuidado."
+      content="Aplicativo de agendamento, financeiro e operação para salões, barbearias e estúdios de beleza. Clientes agendam por link, sem baixar app."
     />
+    <link rel="canonical" href="https://pegasusapp.com.br/" />
     <meta name="theme-color" content="#0D0D0D" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://pegasusapp.com.br/" />
     <meta property="og:site_name" content="Pegasus" />
-    <meta property="og:title" content="Pegasus - Gestão premium para negócios de beleza" />
+    <meta property="og:title" content="Pegasus - Aplicativo para salões, barbearias e estúdios" />
     <meta
       property="og:description"
-      content="Agenda, finanças e operação em um único aplicativo para salões, barbearias e negócios de autocuidado."
+      content="Agenda, finanças e operação em um único aplicativo para negócios de beleza. Envie um link e deixe o cliente agendar sem baixar app."
     />
-    <meta property="og:image" content="assets/pegasus-logo-black-full.png" />
+    <meta property="og:image" content="https://pegasusapp.com.br/assets/og-image.png" />
+    <meta property="og:image:secure_url" content="https://pegasusapp.com.br/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pegasus, aplicativo de agenda, financeiro e operação para negócios de beleza" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Pegasus - Gestão premium para negócios de beleza" />
+    <meta name="twitter:site" content="@pegasusapp_" />
+    <meta name="twitter:title" content="Pegasus - Aplicativo para negócios de beleza" />
     <meta
       name="twitter:description"
-      content="Agenda, finanças e operação em um único aplicativo para salões, barbearias e negócios de autocuidado."
+      content="Agendamento por link, financeiro e operação em um único aplicativo para salões, barbearias e estúdios."
     />
-    <meta name="twitter:image" content="assets/pegasus-logo-black-full.png" />
+    <meta name="twitter:image" content="https://pegasusapp.com.br/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Pegasus, aplicativo de agenda, financeiro e operação para negócios de beleza" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,36 +47,101 @@
     />
     <link rel="stylesheet" href="PEGASUS_tokens.css" />
     <link rel="stylesheet" href="hero.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://pegasusapp.com.br/#organization",
+            "name": "Pegasus",
+            "url": "https://pegasusapp.com.br/",
+            "logo": "https://pegasusapp.com.br/assets/pegasus-logo-black-full.png",
+            "email": "suporte@pegasusapp.com.br",
+            "sameAs": [
+              "https://www.instagram.com/pegasus.app/",
+              "https://x.com/pegasusapp_",
+              "https://www.youtube.com/@Pegasus_app"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "suporte@pegasusapp.com.br",
+              "contactType": "customer support",
+              "availableLanguage": ["pt-BR"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://pegasusapp.com.br/#website",
+            "url": "https://pegasusapp.com.br/",
+            "name": "Pegasus",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://pegasusapp.com.br/#organization"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pegasusapp.com.br/#software",
+            "name": "Pegasus",
+            "url": "https://pegasusapp.com.br/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "pt-BR",
+            "description": "Aplicativo de agendamento, financeiro e operação para salões, barbearias e estúdios de beleza. Clientes agendam por link, sem baixar app.",
+            "publisher": {
+              "@id": "https://pegasusapp.com.br/#organization"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Navegação principal">
       <div class="site-header__left">
-        <a class="site-header__brand" href="#" aria-label="PEGASUS">
-          <img class="site-header__brand-base site-header__brand-base--dark" src="assets/pegasus-logo-static.png" alt="PEGASUS" />
+        <a class="site-header__brand" href="#" aria-label="Pegasus">
+          <img
+            class="site-header__brand-base site-header__brand-base--dark"
+            src="assets/pegasus-logo-static.png"
+            width="1795"
+            height="319"
+            alt="Pegasus"
+            decoding="async"
+          />
           <img
             class="site-header__brand-base site-header__brand-base--light"
             src="assets/pegasus-logo-black.png"
+            width="1795"
+            height="319"
             alt=""
             aria-hidden="true"
+            decoding="async"
           />
           <img
             class="site-header__brand-wing site-header__brand-wing--dark"
             src="assets/pegasus-logo-wing.png"
+            width="1795"
+            height="319"
             alt=""
             aria-hidden="true"
+            decoding="async"
           />
           <img
             class="site-header__brand-wing site-header__brand-wing--light"
             src="assets/pegasus-logo-wing-black.png"
+            width="1795"
+            height="319"
             alt=""
             aria-hidden="true"
+            decoding="async"
           />
         </a>
 
         <nav class="site-header__nav" aria-label="Seções do site">
           <a href="#produto">Produto</a>
           <a href="#beneficios">Benefícios</a>
-          <a href="#demonstracao">Demonstração</a>
+          <a href="#sobre">Sobre</a>
         </nav>
       </div>
 
@@ -93,7 +167,7 @@
           <span>Produto</span>
           <a href="#produto">Produto</a>
           <a href="#beneficios">Benefícios</a>
-          <a href="#demonstracao">Demonstração</a>
+          <a href="#sobre">Sobre</a>
         </nav>
 
         <div class="mobile-menu__actions">
@@ -177,7 +251,7 @@
             </h2>
           </div>
 
-          <div class="product-section__features" id="beneficios">
+          <div class="product-section__features">
             <article>
               <span>01</span>
               <strong>Menos conversa antes do horário</strong>
@@ -196,7 +270,7 @@
           </div>
         </div>
 
-        <div class="product-showcase" id="demonstracao">
+        <div class="product-showcase">
           <aside class="product-showcase__rail">
             <div>
               <span class="product-showcase__label">Aplicativo PEGASUS</span>
@@ -458,7 +532,7 @@
       </div>
     </section>
 
-    <section class="insights-section" aria-labelledby="insights-title">
+    <section class="insights-section" id="beneficios" aria-labelledby="insights-title">
       <div class="pg-container">
         <div class="insights-section__intro">
           <div class="insights-section__headline">
@@ -761,7 +835,7 @@
       </div>
     </section>
 
-    <section class="spotlight-section" aria-labelledby="spotlight-title">
+    <section class="spotlight-section" id="sobre" aria-labelledby="spotlight-title">
       <div class="pg-container">
         <div class="spotlight-section__headline">
           <span class="spotlight-kicker">
@@ -779,7 +853,14 @@
 
           <div class="spotlight-card__content">
             <div class="spotlight-card__logo">
-              <img src="assets/pegasus-logo-black-full.png" alt="Pegasus" />
+              <img
+                src="assets/pegasus-logo-black-full.png"
+                width="1862"
+                height="346"
+                loading="lazy"
+                decoding="async"
+                alt="Pegasus"
+              />
             </div>
 
             <h3>Criado para devolver clareza a quem passa o dia cuidando de pessoas.</h3>
@@ -788,10 +869,17 @@
 
             <div class="spotlight-person">
               <div class="spotlight-person__photo" aria-hidden="true">
-                <img src="assets/founder-danilo-neto.png" alt="" />
+                <img
+                  src="assets/founder-danilo-neto.jpg"
+                  width="1070"
+                  height="1470"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Foto de Danillo Neto, fundador do Pegasus"
+                />
               </div>
               <p>
-                <strong>Danilo Neto</strong>
+                <strong>Danillo Neto</strong>
                 <span>Fundador do Pegasus</span>
               </p>
             </div>
@@ -800,7 +888,7 @@
               “Eu criei o Pegasus para resolver problemas que existem no dia a dia de barbearias,
               salões e estúdios de beleza: agenda no bloco de notas, financeiro no caderninho,
               confirmação manual e decisões tomadas no escuro. O dono do negócio precisa de um
-              aplicativo que organize sua rotina enquanto o profissional foca no atendimento ao cliente.”
+              aplicativo que organize sua rotina enquanto o profissional foca no atendimento ao cliente.�?
             </blockquote>
           </div>
         </article>
@@ -842,7 +930,14 @@
     <footer class="site-footer" aria-label="Rodapé do site">
       <div class="pg-container site-footer__inner">
         <div class="site-footer__brand">
-          <img src="assets/pegasus-logo-black-full.png" alt="PEGASUS" />
+          <img
+            src="assets/pegasus-logo-black-full.png"
+            width="1862"
+            height="346"
+            loading="lazy"
+            decoding="async"
+            alt="Pegasus"
+          />
           <p>
             Agenda, finanças e operação em um único aplicativo para quem leva beleza
             e autocuidado a sério.
@@ -854,7 +949,7 @@
             <span>Produto</span>
             <a href="#produto">Visão geral</a>
             <a href="#beneficios">Benefícios</a>
-            <a href="#demonstracao">Demonstração</a>
+            <a href="#sobre">Sobre</a>
           </div>
           <div>
             <span>Negócios</span>
@@ -864,28 +959,28 @@
           </div>
           <div>
             <span>Contato</span>
-            <a href="mailto:contato@pegasus.app">contato@pegasus.app</a>
-            <a href="#especialista">Falar com especialista</a>
-            <a href="#privacidade">Privacidade</a>
+            <a href="mailto:suporte@pegasusapp.com.br">suporte@pegasusapp.com.br</a>
+            <a href="mailto:suporte@pegasusapp.com.br?subject=Falar%20com%20especialista%20Pegasus">Falar com especialista</a>
+            <a href="mailto:suporte@pegasusapp.com.br?subject=Privacidade%20Pegasus">Privacidade</a>
           </div>
         </nav>
 
         <div class="site-footer__bottom">
           <span>© 2026 Pegasus. Todos os direitos reservados.</span>
           <div class="site-footer__social" aria-label="Redes sociais">
-            <a href="#instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/pegasus.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="4.5" y="4.5" width="15" height="15" rx="4.2"></rect>
                 <circle cx="12" cy="12" r="3.6"></circle>
                 <circle cx="16.8" cy="7.2" r="0.9"></circle>
               </svg>
             </a>
-            <a href="#x" aria-label="X">
+            <a href="https://x.com/pegasusapp_" target="_blank" rel="noopener noreferrer" aria-label="X">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"></path>
               </svg>
             </a>
-            <a href="#youtube" aria-label="YouTube">
+            <a href="https://www.youtube.com/@Pegasus_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3.8" y="6.8" width="16.4" height="10.4" rx="3"></rect>
                 <path d="M10.2 9.4v5.2l4.8-2.6-4.8-2.6z"></path>
@@ -897,279 +992,7 @@
       </div>
     </footer>
 
-    <script src="shader-hero.js"></script>
-    <script>
-      const header = document.querySelector(".site-header");
-      const menuButton = document.querySelector(".site-header__menu-button");
-      const mobileMenu = document.querySelector(".mobile-menu");
-      const lightSections = document.querySelectorAll(".spotlight-section, .final-cta-section, .site-footer");
-      const productVisual = document.querySelector(".product-showcase__visual");
-      const productPreview = document.querySelector("[data-product-preview]");
-      const productFlowItems = document.querySelectorAll("[data-product-step]");
-      const productTemplates = document.querySelectorAll("[data-product-template]");
-      const insightVisual = document.querySelector(".insights-showcase__visual");
-      const insightPreview = document.querySelector("[data-insight-preview]");
-      const insightFlowItems = document.querySelectorAll("[data-insight-step]");
-      const insightTemplates = document.querySelectorAll("[data-insight-template]");
-      const desktopQuery = window.matchMedia("(min-width: 901px)");
-      const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-      const productFlowDuration = 12000;
-      const insightFlowDuration = 12000;
-      const productPanelThemes = [
-        "product-dashboard--booking",
-        "product-dashboard--services",
-        "product-dashboard--team",
-        "product-dashboard--finance",
-      ];
-      const productVisualThemes = [
-        "product-showcase__visual--booking",
-        "product-showcase__visual--services",
-        "product-showcase__visual--team",
-        "product-showcase__visual--finance",
-      ];
-      const insightPanelThemes = [
-        "insight-preview--slots",
-        "insight-preview--confirm",
-        "insight-preview--margin",
-        "insight-preview--clarity",
-      ];
-      const insightVisualThemes = [
-        "insights-showcase__visual--slots",
-        "insights-showcase__visual--confirm",
-        "insights-showcase__visual--margin",
-        "insights-showcase__visual--clarity",
-      ];
-      const initialProductPanel = productPreview ? productPreview.innerHTML : "";
-      const initialInsightPanel = insightPreview ? insightPreview.innerHTML : "";
-      let activeProductStep = 0;
-      let activeInsightStep = 0;
-      let productFlowTimer;
-      let productPanelTimer;
-      let insightFlowTimer;
-      let insightPanelTimer;
-
-      function formatCountValue(value, item) {
-        const prefix = item.dataset.countPrefix || "";
-        const suffix = item.dataset.countSuffix || "";
-        const roundedValue = Math.round(value);
-        const formattedValue =
-          item.dataset.countFormat === "pt-BR"
-            ? roundedValue.toLocaleString("pt-BR")
-            : String(roundedValue);
-
-        return `${prefix}${formattedValue}${suffix}`;
-      }
-
-      function animateCountUp(item) {
-        const target = Number(item.dataset.countTo || 0);
-
-        if (!Number.isFinite(target)) {
-          return;
-        }
-
-        if (reducedMotionQuery.matches) {
-          item.textContent = formatCountValue(target, item);
-          return;
-        }
-
-        const duration = 1200;
-        const startTime = performance.now();
-
-        function updateValue(now) {
-          const elapsed = Math.min((now - startTime) / duration, 1);
-          const eased = 1 - Math.pow(1 - elapsed, 3);
-
-          item.textContent = formatCountValue(target * eased, item);
-
-          if (elapsed < 1) {
-            requestAnimationFrame(updateValue);
-          }
-        }
-
-        requestAnimationFrame(updateValue);
-      }
-
-      function initCountUps(scope = document) {
-        scope.querySelectorAll(".count-up").forEach(animateCountUp);
-      }
-
-      function getProductPanel(index) {
-        if (index === 0) {
-          return initialProductPanel;
-        }
-
-        return productTemplates[index - 1]?.innerHTML || initialProductPanel;
-      }
-
-      function restartProductTimer() {
-        if (!productFlowItems.length) {
-          return;
-        }
-
-        window.clearTimeout(productFlowTimer);
-        productFlowTimer = window.setTimeout(() => {
-          const nextStep = (activeProductStep + 1) % productFlowItems.length;
-          setProductStep(nextStep);
-        }, productFlowDuration);
-      }
-
-      function renderProductPanel(index) {
-        if (!productPreview) {
-          return;
-        }
-
-        window.clearTimeout(productPanelTimer);
-        productPreview.classList.add("is-changing");
-
-        productPanelTimer = window.setTimeout(() => {
-          productPreview.classList.remove(...productPanelThemes);
-          productPreview.classList.add(productPanelThemes[index]);
-          productVisual?.classList.remove(...productVisualThemes);
-          productVisual?.classList.add(productVisualThemes[index]);
-          productPreview.innerHTML = getProductPanel(index);
-          initCountUps(productPreview);
-          requestAnimationFrame(() => {
-            productPreview.classList.remove("is-changing");
-          });
-        }, 140);
-      }
-
-      function setProductStep(index) {
-        if (!productFlowItems[index]) {
-          return;
-        }
-
-        activeProductStep = index;
-
-        productFlowItems.forEach((item) => {
-          item.classList.remove("is-active");
-          item.removeAttribute("aria-current");
-          item.style.setProperty("--flow-duration", `${productFlowDuration}ms`);
-        });
-
-        productFlowItems[index].offsetWidth;
-        productFlowItems[index].classList.add("is-active");
-        productFlowItems[index].setAttribute("aria-current", "step");
-        renderProductPanel(index);
-        restartProductTimer();
-      }
-
-      function getInsightPanel(index) {
-        if (index === 0) {
-          return initialInsightPanel;
-        }
-
-        return insightTemplates[index - 1]?.innerHTML || initialInsightPanel;
-      }
-
-      function restartInsightTimer() {
-        if (!insightFlowItems.length) {
-          return;
-        }
-
-        window.clearTimeout(insightFlowTimer);
-        insightFlowTimer = window.setTimeout(() => {
-          const nextStep = (activeInsightStep + 1) % insightFlowItems.length;
-          setInsightStep(nextStep);
-        }, insightFlowDuration);
-      }
-
-      function renderInsightPanel(index) {
-        if (!insightPreview) {
-          return;
-        }
-
-        window.clearTimeout(insightPanelTimer);
-        insightPreview.classList.add("is-changing");
-
-        insightPanelTimer = window.setTimeout(() => {
-          insightPreview.classList.remove(...insightPanelThemes);
-          insightPreview.classList.add(insightPanelThemes[index]);
-          insightVisual?.classList.remove(...insightVisualThemes);
-          insightVisual?.classList.add(insightVisualThemes[index]);
-          insightPreview.innerHTML = getInsightPanel(index);
-          initCountUps(insightPreview);
-          requestAnimationFrame(() => {
-            insightPreview.classList.remove("is-changing");
-          });
-        }, 140);
-      }
-
-      function setInsightStep(index) {
-        if (!insightFlowItems[index]) {
-          return;
-        }
-
-        activeInsightStep = index;
-
-        insightFlowItems.forEach((item) => {
-          item.classList.remove("is-active");
-          item.removeAttribute("aria-current");
-          item.style.setProperty("--flow-duration", `${insightFlowDuration}ms`);
-        });
-
-        insightFlowItems[index].offsetWidth;
-        insightFlowItems[index].classList.add("is-active");
-        insightFlowItems[index].setAttribute("aria-current", "step");
-        renderInsightPanel(index);
-        restartInsightTimer();
-      }
-
-      function updateHeaderState() {
-        const headerRect = header.getBoundingClientRect();
-        const probeY = headerRect.top + headerRect.height / 2;
-        const isOnLight = Array.from(lightSections).some((section) => {
-          const sectionRect = section.getBoundingClientRect();
-
-          return sectionRect.top <= probeY && sectionRect.bottom >= probeY;
-        });
-
-        header.classList.toggle("is-scrolled", window.scrollY > 16);
-        header.classList.toggle("is-on-light", isOnLight);
-      }
-
-      function updateMenuState(isOpen) {
-        header.classList.toggle("is-menu-open", isOpen);
-        document.body.classList.toggle("is-menu-open", isOpen);
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-      }
-
-      function closeMobileMenu() {
-        updateMenuState(false);
-      }
-
-      updateHeaderState();
-      initCountUps();
-      productFlowItems.forEach((item, index) => {
-        item.style.setProperty("--flow-duration", `${productFlowDuration}ms`);
-        item.addEventListener("click", () => setProductStep(index));
-      });
-      restartProductTimer();
-      insightFlowItems.forEach((item, index) => {
-        item.style.setProperty("--flow-duration", `${insightFlowDuration}ms`);
-        item.addEventListener("click", () => setInsightStep(index));
-      });
-      restartInsightTimer();
-      window.addEventListener("scroll", updateHeaderState, { passive: true });
-      window.addEventListener("resize", updateHeaderState);
-      menuButton.addEventListener("click", () => {
-        updateMenuState(!header.classList.contains("is-menu-open"));
-      });
-      mobileMenu.addEventListener("click", (event) => {
-        if (event.target.closest("a")) {
-          closeMobileMenu();
-        }
-      });
-      window.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          closeMobileMenu();
-        }
-      });
-      desktopQuery.addEventListener("change", (event) => {
-        if (event.matches) {
-          closeMobileMenu();
-        }
-      });
-    </script>
+    <script src="shader-hero.js" defer></script>
+    <script src="site.js" defer></script>
   </body>
 </html>
