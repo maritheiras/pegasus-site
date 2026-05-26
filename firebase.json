@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "site": "site-pegasus",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "PEGASUS_Copy_Estrategica.pdf",
+      "PEGASUS_design_system.md",
+      "cores.png",
+      "imagens.png",
+      "tipografia.png",
+      "ChatGPT Image*"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
