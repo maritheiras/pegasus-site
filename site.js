@@ -27,6 +27,12 @@
     "product-showcase__visual--team",
     "product-showcase__visual--finance",
   ];
+  const productVisualImages = [
+    "assets/showcase-agenda.jpg",
+    "assets/showcase-confirm.jpg",
+    "assets/showcase-report.jpg",
+    "assets/showcase-finance.jpg",
+  ];
   const insightPanelThemes = [
     "insight-preview--slots",
     "insight-preview--confirm",
@@ -39,6 +45,13 @@
     "insights-showcase__visual--margin",
     "insights-showcase__visual--clarity",
   ];
+  const insightVisualImages = [
+    "assets/showcase-agenda.jpg",
+    "assets/showcase-confirm.jpg",
+    "assets/showcase-finance.jpg",
+    "assets/showcase-report.jpg",
+  ];
+  const sharedVisualImages = Array.from(new Set([...productVisualImages, ...insightVisualImages]));
 
   const initialProductPanel = createTemplateFromElement(productPreview);
   const initialInsightPanel = createTemplateFromElement(insightPreview);
@@ -48,6 +61,7 @@
   let productPanelTimer;
   let insightFlowTimer;
   let insightPanelTimer;
+  const visualTransitionDuration = 1100;
 
   function createTemplateFromElement(element) {
     const template = document.createElement("template");
@@ -114,6 +128,63 @@
     scope.querySelectorAll(".count-up").forEach(animateCountUp);
   }
 
+  function formatVisualImage(src) {
+    return `url("${src}")`;
+  }
+
+  function createVisualLayer(src) {
+    const layer = document.createElement("span");
+
+    layer.className = "showcase-visual-layer is-active";
+    layer.setAttribute("aria-hidden", "true");
+    layer.style.setProperty("--visual-image", formatVisualImage(src));
+
+    return layer;
+  }
+
+  function setVisualBackground(element, src) {
+    if (!element || !src) {
+      return;
+    }
+
+    element.classList.add("has-animated-visual");
+
+    if (element.dataset.visualImage === src) {
+      return;
+    }
+
+    const currentLayers = Array.from(element.querySelectorAll(".showcase-visual-layer"));
+
+    if (!currentLayers.length || reducedMotionQuery.matches) {
+      element.querySelectorAll(".showcase-visual-layer").forEach((layer) => layer.remove());
+      element.prepend(createVisualLayer(src));
+      element.dataset.visualImage = src;
+      return;
+    }
+
+    const nextLayer = createVisualLayer(src);
+    nextLayer.classList.add("is-entering");
+    element.append(nextLayer);
+    element.dataset.visualImage = src;
+
+    requestAnimationFrame(() => {
+      currentLayers.forEach((layer) => {
+        layer.classList.add("is-leaving");
+        window.setTimeout(() => layer.remove(), visualTransitionDuration);
+      });
+      nextLayer.classList.remove("is-entering");
+    });
+  }
+
+  function preloadVisualImages(images) {
+    images.forEach((src) => {
+      const image = new Image();
+      image.decoding = "async";
+      image.src = src;
+      image.decode?.().catch(() => {});
+    });
+  }
+
   function getProductPanel(index) {
     if (index === 0) {
       return initialProductPanel;
@@ -141,6 +212,7 @@
 
     window.clearTimeout(productPanelTimer);
     productPreview.classList.add("is-changing");
+    setVisualBackground(productVisual, productVisualImages[index]);
 
     productPanelTimer = window.setTimeout(() => {
       productPreview.classList.remove(...productPanelThemes);
@@ -152,7 +224,7 @@
       requestAnimationFrame(() => {
         productPreview.classList.remove("is-changing");
       });
-    }, 140);
+    }, 220);
   }
 
   function setProductStep(index) {
@@ -202,6 +274,7 @@
 
     window.clearTimeout(insightPanelTimer);
     insightPreview.classList.add("is-changing");
+    setVisualBackground(insightVisual, insightVisualImages[index]);
 
     insightPanelTimer = window.setTimeout(() => {
       insightPreview.classList.remove(...insightPanelThemes);
@@ -213,7 +286,7 @@
       requestAnimationFrame(() => {
         insightPreview.classList.remove("is-changing");
       });
-    }, 140);
+    }, 220);
   }
 
   function setInsightStep(index) {
@@ -274,12 +347,15 @@
     item.style.setProperty("--flow-duration", `${productFlowDuration}ms`);
     item.addEventListener("click", () => setProductStep(index));
   });
+  preloadVisualImages(sharedVisualImages);
+  setVisualBackground(productVisual, productVisualImages[activeProductStep]);
   restartProductTimer();
 
   insightFlowItems.forEach((item, index) => {
     item.style.setProperty("--flow-duration", `${insightFlowDuration}ms`);
     item.addEventListener("click", () => setInsightStep(index));
   });
+  setVisualBackground(insightVisual, insightVisualImages[activeInsightStep]);
   restartInsightTimer();
 
   window.addEventListener("scroll", updateHeaderState, { passive: true });
