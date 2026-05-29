@@ -31,14 +31,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="preconnect" href={siteConfig.appUrl} />
         <link rel="dns-prefetch" href={SOCIAL_LINKS.instagram.origin} />
         <link rel="dns-prefetch" href={SOCIAL_LINKS.x.origin} />
         <link rel="dns-prefetch" href={SOCIAL_LINKS.youtube.origin} />
       </head>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body>
         <StructuredData />
         {children}
       </body>
