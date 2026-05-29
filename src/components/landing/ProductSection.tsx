@@ -1,4 +1,7 @@
-﻿import type { CSSProperties } from "react";
+import type { CSSProperties } from "react";
+
+import { ExternalLink } from "@/components/ui";
+import { APP_LINKS } from "@/constants/links";
 
 export function ProductSection() {
   return (
@@ -47,7 +50,9 @@ export function ProductSection() {
                   </p>
                 </div>
     
-                <a className="product-showcase__button" href="https://pegasusapp.com.br">Ver o app em ação</a>
+                <ExternalLink className="product-showcase__button" href={APP_LINKS.app}>
+                  Ver o app em ação
+                </ExternalLink>
     
                 <div className="product-flow" aria-label="Fluxo do produto" data-product-flow>
                   <button className="product-flow__item is-active" type="button" data-product-step="0" aria-current="step">

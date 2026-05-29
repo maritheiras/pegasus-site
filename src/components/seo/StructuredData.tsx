@@ -28,6 +28,11 @@ export function StructuredData() {
         publisher: {
           "@id": absoluteUrl("/#organization"),
         },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${absoluteUrl("/")}?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "SoftwareApplication",
@@ -39,6 +44,15 @@ export function StructuredData() {
         inLanguage: "pt-BR",
         description: siteConfig.description,
         publisher: {
+          "@id": absoluteUrl("/#organization"),
+        },
+      },
+      {
+        "@type": "Person",
+        "@id": absoluteUrl("/#founder"),
+        name: "Danillo Neto",
+        jobTitle: "Fundador do Pegasus",
+        worksFor: {
           "@id": absoluteUrl("/#organization"),
         },
       },

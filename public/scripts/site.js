@@ -61,6 +61,7 @@
   let productPanelTimer;
   let insightFlowTimer;
   let insightPanelTimer;
+  let headerStateFrame = 0;
 
   function createTemplateFromElement(element) {
     if (!element) {
@@ -132,6 +133,14 @@
     return `url("${src}")`;
   }
 
+  function createVisualLayer(src, className = "") {
+    const layer = document.createElement("span");
+    layer.className = `showcase-visual-layer${className ? ` ${className}` : ""}`;
+    layer.style.setProperty("--visual-image", formatVisualImage(src));
+
+    return layer;
+  }
+
   function setVisualBackground(element, src, propertyName = "--showcase-image") {
     if (!element || !src) {
       return;
@@ -141,10 +150,34 @@
       return;
     }
 
+    const previousSrc = element.dataset.visualImage;
+
     element.dataset.visualImage = src;
-    element.classList.remove("has-animated-visual");
     element.querySelectorAll(".showcase-visual-layer").forEach((layer) => layer.remove());
-    element.style.setProperty(propertyName, formatVisualImage(src));
+
+    if (!previousSrc || reducedMotionQuery.matches) {
+      element.classList.remove("has-animated-visual");
+      element.style.setProperty(propertyName, formatVisualImage(src));
+      return;
+    }
+
+    const leavingLayer = createVisualLayer(previousSrc);
+    const enteringLayer = createVisualLayer(src, "is-entering");
+
+    element.classList.add("has-animated-visual");
+    element.append(leavingLayer, enteringLayer);
+
+    requestAnimationFrame(() => {
+      element.style.setProperty(propertyName, formatVisualImage(src));
+      enteringLayer.classList.remove("is-entering");
+      leavingLayer.classList.add("is-leaving");
+    });
+
+    window.setTimeout(() => {
+      leavingLayer.remove();
+      enteringLayer.remove();
+      element.classList.remove("has-animated-visual");
+    }, 1000);
   }
 
   function preloadVisualImages(images) {
@@ -200,6 +233,11 @@
 
   function setProductStep(index) {
     if (!productFlowItems[index]) {
+      return;
+    }
+
+    if (index === activeProductStep) {
+      restartProductTimer();
       return;
     }
 
@@ -265,6 +303,11 @@
       return;
     }
 
+    if (index === activeInsightStep) {
+      restartInsightTimer();
+      return;
+    }
+
     activeInsightStep = index;
 
     insightFlowItems.forEach((item) => {
@@ -295,6 +338,17 @@
 
     header.classList.toggle("is-scrolled", window.scrollY > 16);
     header.classList.toggle("is-on-light", isOnLight);
+  }
+
+  function scheduleHeaderStateUpdate() {
+    if (headerStateFrame) {
+      return;
+    }
+
+    headerStateFrame = requestAnimationFrame(() => {
+      headerStateFrame = 0;
+      updateHeaderState();
+    });
   }
 
   function updateMenuState(isOpen) {
@@ -329,8 +383,8 @@
   setVisualBackground(insightVisual, insightVisualImages[activeInsightStep], "--insights-image");
   restartInsightTimer();
 
-  window.addEventListener("scroll", updateHeaderState, { passive: true });
-  window.addEventListener("resize", updateHeaderState);
+  window.addEventListener("scroll", scheduleHeaderStateUpdate, { passive: true });
+  window.addEventListener("resize", scheduleHeaderStateUpdate);
 
   menuButton?.addEventListener("click", () => {
     updateMenuState(!header?.classList.contains("is-menu-open"));

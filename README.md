@@ -8,14 +8,21 @@ Site institucional do Pegasus, aplicativo de agenda, financeiro e operação par
 - React
 - TypeScript
 - CSS global organizado por tokens e estilos da landing
-- Exportação estática para Netlify/Firebase
+- `next/font` para carregar Inter e Playfair Display com otimização de fonte
+- Exportação estática para Netlify/Firebase/Vercel
 
 ## Estrutura
 
-- `src/app`: rotas, metadados, sitemap, robots e manifest.
-- `src/components/landing`: seções da página inicial.
+- `src/app`: rotas, layout global, metadata, sitemap, robots e manifest.
+- `src/components/ui`: componentes primitivos reutilizáveis, como `Button`, `ExternalLink`, `Container`, `Section` e `Icon`.
+- `src/components/layout`: exports de Header e Footer.
+- `src/components/sections`: exports das seções da página inicial.
+- `src/components/landing`: implementação visual das seções da landing.
 - `src/components/seo`: dados estruturados em JSON-LD.
-- `src/config`: informações centrais do site, domínio, links sociais e contato.
+- `src/constants`: rotas, links externos e redes sociais centralizados.
+- `src/config`: informações centrais do site, domínio, app e contato.
+- `src/hooks`: hooks reutilizáveis para media query, scroll e clique externo.
+- `src/lib`: helpers de metadata e utilitários compartilhados.
 - `src/styles`: tokens visuais e CSS da experiência.
 - `public/assets`: imagens, ícones, logos e favicons servidos pelo Next.
 - `public/scripts`: scripts de interação e animação usados pela landing.
@@ -39,4 +46,4 @@ O projeto está configurado para exportação estática. O comando de produção
 npm run build
 ```
 
-A pasta publicada deve ser `out`.
+A pasta publicada deve ser `out`. Em deploy estático, use também os headers de segurança em `netlify.toml`, `_headers` ou `vercel.json`, porque `headers()` do Next não é aplicado automaticamente com `output: "export"`.

@@ -1,4 +1,7 @@
-﻿import type { CSSProperties } from "react";
+import type { CSSProperties } from "react";
+
+import { ExternalLink } from "@/components/ui";
+import { APP_LINKS } from "@/constants/links";
 
 export function InsightsSection() {
   return (
@@ -104,7 +107,9 @@ export function InsightsSection() {
                   </p>
                 </div>
     
-                <a className="product-showcase__button" href="https://pegasusapp.com.br">Ver sugestões do app</a>
+                <ExternalLink className="product-showcase__button" href={APP_LINKS.app}>
+                  Ver sugestões do app
+                </ExternalLink>
     
                 <div className="insight-flow" aria-label="Fluxo de sugestões inteligentes" data-insight-flow>
                   <button className="insight-flow__item is-active" type="button" data-insight-step="0" aria-current="step">

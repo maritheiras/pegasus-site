@@ -1,13 +1,6 @@
-import {
-  ClientScripts,
-  FinalCtaSection,
-  Footer,
-  FounderSection,
-  Header,
-  HeroSection,
-  InsightsSection,
-  ProductSection,
-} from "@/components/landing";
+import { ClientScripts } from "@/components/landing/ClientScripts";
+import { Footer, Header } from "@/components/layout";
+import { FinalCtaSection, FounderSection, HeroSection, InsightsSection, ProductSection } from "@/components/sections";
 
 export default function Home() {
   return (

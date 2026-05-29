@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "@/constants/social";
+
 export const siteConfig = {
   name: "Pegasus",
   domain: "https://pegasus-site.netlify.app",
@@ -8,9 +10,9 @@ export const siteConfig = {
   socialDescription:
     "Agenda, finanças e operação em um único aplicativo para negócios de beleza. Envie um link e deixe o cliente agendar sem baixar app.",
   social: {
-    instagram: "https://www.instagram.com/pegasus.app/",
-    x: "https://x.com/pegasusapp_",
-    youtube: "https://www.youtube.com/@Pegasus_app",
+    instagram: SOCIAL_LINKS.instagram.href,
+    x: SOCIAL_LINKS.x.href,
+    youtube: SOCIAL_LINKS.youtube.href,
   },
 } as const;
 
