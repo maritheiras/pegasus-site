@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { ExternalLink } from "@/components/ui";
 import { APP_LINKS } from "@/constants/links";
+import { NAV_LINKS } from "@/constants/routes";
 import { SOCIAL_LINKS } from "@/constants/social";
 
 export function Footer() {
@@ -25,9 +26,11 @@ export function Footer() {
         <nav className="site-footer__nav" aria-label="Links do rodapé">
           <div>
             <span>Produto</span>
-            <a href="#produto">Visão geral</a>
-            <a href="#beneficios">Benefícios</a>
-            <a href="#sobre">Sobre</a>
+            {NAV_LINKS.map((link) => (
+              <a href={link.href} key={link.href}>
+                {link.label}
+              </a>
+            ))}
           </div>
           <div>
             <span>Negócios</span>

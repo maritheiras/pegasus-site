@@ -52,6 +52,8 @@
     "/assets/showcase-report.jpg",
   ];
   const sharedVisualImages = Array.from(new Set([...productVisualImages, ...insightVisualImages]));
+  const visualImageCache = new Map();
+  const visualAnimationTimers = new WeakMap();
 
   const initialProductPanel = createTemplateFromElement(productPreview);
   const initialInsightPanel = createTemplateFromElement(insightPreview);
@@ -133,6 +135,30 @@
     return `url("${src}")`;
   }
 
+  function prepareVisualImage(src) {
+    if (!visualImageCache.has(src)) {
+      visualImageCache.set(
+        src,
+        new Promise((resolve) => {
+          const image = new Image();
+          image.decoding = "async";
+          image.onload = () => {
+            if (image.decode) {
+              image.decode().then(resolve, resolve);
+              return;
+            }
+
+            resolve();
+          };
+          image.onerror = resolve;
+          image.src = src;
+        }),
+      );
+    }
+
+    return visualImageCache.get(src);
+  }
+
   function createVisualLayer(src, className = "") {
     const layer = document.createElement("span");
     layer.className = `showcase-visual-layer${className ? ` ${className}` : ""}`;
@@ -146,46 +172,57 @@
       return;
     }
 
-    if (element.dataset.visualImage === src) {
+    if (element.dataset.visualImage === src || element.dataset.nextVisualImage === src) {
       return;
     }
 
     const previousSrc = element.dataset.visualImage;
+    element.dataset.nextVisualImage = src;
+    window.clearTimeout(visualAnimationTimers.get(element));
 
-    element.dataset.visualImage = src;
-    element.querySelectorAll(".showcase-visual-layer").forEach((layer) => layer.remove());
+    prepareVisualImage(src).then(() => {
+      if (element.dataset.nextVisualImage !== src) {
+        return;
+      }
 
-    if (!previousSrc || reducedMotionQuery.matches) {
-      element.classList.remove("has-animated-visual");
-      element.style.setProperty(propertyName, formatVisualImage(src));
-      return;
-    }
+      element.querySelectorAll(".showcase-visual-layer").forEach((layer) => layer.remove());
 
-    const leavingLayer = createVisualLayer(previousSrc);
-    const enteringLayer = createVisualLayer(src, "is-entering");
+      if (!previousSrc || reducedMotionQuery.matches) {
+        element.classList.remove("has-animated-visual");
+        element.style.setProperty(propertyName, formatVisualImage(src));
+        element.dataset.visualImage = src;
+        delete element.dataset.nextVisualImage;
+        return;
+      }
 
-    element.classList.add("has-animated-visual");
-    element.append(leavingLayer, enteringLayer);
+      const enteringLayer = createVisualLayer(src, "is-entering");
 
-    requestAnimationFrame(() => {
-      element.style.setProperty(propertyName, formatVisualImage(src));
-      enteringLayer.classList.remove("is-entering");
-      leavingLayer.classList.add("is-leaving");
+      element.classList.add("has-animated-visual");
+      element.append(enteringLayer);
+
+      requestAnimationFrame(() => {
+        enteringLayer.classList.remove("is-entering");
+      });
+
+      const transitionTimer = window.setTimeout(() => {
+        if (element.dataset.nextVisualImage !== src) {
+          return;
+        }
+
+        element.style.setProperty(propertyName, formatVisualImage(src));
+        element.dataset.visualImage = src;
+        delete element.dataset.nextVisualImage;
+        enteringLayer.remove();
+        element.classList.remove("has-animated-visual");
+      }, 1050);
+
+      visualAnimationTimers.set(element, transitionTimer);
     });
-
-    window.setTimeout(() => {
-      leavingLayer.remove();
-      enteringLayer.remove();
-      element.classList.remove("has-animated-visual");
-    }, 1000);
   }
 
   function preloadVisualImages(images) {
     images.forEach((src) => {
-      const image = new Image();
-      image.decoding = "async";
-      image.src = src;
-      image.decode?.().catch(() => {});
+      prepareVisualImage(src);
     });
   }
 

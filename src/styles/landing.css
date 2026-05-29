@@ -1092,7 +1092,7 @@ body::-webkit-scrollbar-thumb:hover {
 .product-showcase__visual.has-animated-visual {
   background:
     linear-gradient(180deg, rgba(200, 182, 166, 0.18), rgba(13, 13, 13, 0.1)),
-    #161616;
+    var(--showcase-image) center / cover;
 }
 
 .showcase-visual-layer {
@@ -2608,7 +2608,7 @@ body::-webkit-scrollbar-thumb:hover {
 .insights-showcase__visual.has-animated-visual {
   background:
     linear-gradient(180deg, rgba(200, 182, 166, 0.16), rgba(13, 13, 13, 0.14)),
-    #161616;
+    var(--insights-image) center / cover;
 }
 
 .insights-showcase__visual--slots {
@@ -3739,6 +3739,16 @@ body::-webkit-scrollbar-thumb:hover {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
+}
+
+.site-footer__social-link--x svg {
+  width: 14px;
+  height: 14px;
+}
+
+.site-footer__social-link--youtube svg {
+  width: 18px;
+  height: 18px;
 }
 
 .site-footer__social-link--x svg path,

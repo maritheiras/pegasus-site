@@ -34,9 +34,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="pt-BR">
       <head>
         <link rel="preconnect" href={siteConfig.appUrl} />
-        <link rel="dns-prefetch" href={SOCIAL_LINKS.instagram.href} />
-        <link rel="dns-prefetch" href={SOCIAL_LINKS.x.href} />
-        <link rel="dns-prefetch" href={SOCIAL_LINKS.youtube.href} />
+        <link rel="dns-prefetch" href={SOCIAL_LINKS.instagram.origin} />
+        <link rel="dns-prefetch" href={SOCIAL_LINKS.x.origin} />
+        <link rel="dns-prefetch" href={SOCIAL_LINKS.youtube.origin} />
       </head>
       <body className={`${inter.variable} ${playfair.variable}`}>
         <StructuredData />
