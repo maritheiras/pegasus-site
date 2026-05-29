@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "site-pegasus",
-    "public": ".",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
