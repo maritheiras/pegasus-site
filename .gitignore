@@ -5,10 +5,16 @@ desktop.ini
 node_modules/
 dist/
 build/
+.next/
+out/
 .cache/
 .env
 .env.*
 
 *.log
+*.tsbuildinfo
 .firebase/
+
+# Artefatos locais para redes sociais
+social-carousel.html
 
