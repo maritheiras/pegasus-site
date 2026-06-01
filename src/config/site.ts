@@ -2,7 +2,7 @@ import { SOCIAL_LINKS } from "@/constants/social";
 
 export const siteConfig = {
   name: "Pegasus",
-  domain: "https://pegasus-site.netlify.app",
+  domain: "https://site-pegasus.web.app",
   appUrl: "https://pegasusapp.com.br",
   supportEmail: "suporte@pegasusapp.com.br",
   description:

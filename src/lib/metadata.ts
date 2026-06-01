@@ -13,7 +13,20 @@ interface CreateMetadataOptions {
 const defaultTitle = "Aplicativo de agenda e financeiro para beleza";
 const defaultImagePath = "/assets/og-image.png";
 const defaultImageAlt =
-  "Pegasus, aplicativo de agenda, financeiro e operação para negócios de beleza";
+  "Logo do Pegasus sobre hero premium do aplicativo de agenda, financeiro e operação para negócios de beleza";
+
+const defaultKeywords = [
+  "Pegasus",
+  "aplicativo de agendamento",
+  "agenda para salão de beleza",
+  "agenda para barbearia",
+  "aplicativo para salão de beleza",
+  "aplicativo para barbearia",
+  "controle financeiro para salão",
+  "agendamento por link",
+  "gestão para estética",
+  "software para negócios de beleza",
+];
 
 export function createMetadata({
   title = defaultTitle,
@@ -33,6 +46,16 @@ export function createMetadata({
     },
     description,
     applicationName: siteConfig.name,
+    authors: [{ name: siteConfig.name, url: siteConfig.domain }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
+    category: "business",
+    keywords: defaultKeywords,
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     alternates: {
       canonical: canonicalUrl,
     },
@@ -60,6 +83,7 @@ export function createMetadata({
           width: 1200,
           height: 630,
           alt: imageAlt,
+          type: "image/png",
         },
       ],
     },
@@ -74,6 +98,8 @@ export function createMetadata({
         {
           url: imageUrl,
           alt: imageAlt,
+          width: 1200,
+          height: 630,
         },
       ],
     },
