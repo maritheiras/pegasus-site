@@ -39,7 +39,11 @@ export function InsightsSection() {
             </div>
     
             <div className="insights-showcase">
-              <div className="insights-showcase__visual insights-showcase__visual--slots" aria-label="Sugestões inteligentes do Pegasus no aplicativo">
+              <div
+                className="insights-showcase__visual insights-showcase__visual--slots"
+                aria-label="Sugestões inteligentes do Pegasus no aplicativo"
+                data-visual-image="/assets/showcase-agenda.jpg"
+              >
                 <div className="insight-preview insight-preview--slots" data-insight-preview aria-live="polite">
                   <div className="insight-preview__topbar">
                     <div>

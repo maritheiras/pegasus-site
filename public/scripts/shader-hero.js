@@ -188,6 +188,7 @@
   let width = 0;
   let height = 0;
   let lastFrame = 0;
+  let isReady = false;
   const frameInterval = 1000 / settings.frameRate;
   const start = performance.now();
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -239,6 +240,11 @@
     gl.uniform3fv(locations.color3, settings.color3);
 
     gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    if (!isReady) {
+      isReady = true;
+      canvas.classList.add("is-ready");
+    }
 
     if (!reduceMotion) {
       requestAnimationFrame(draw);

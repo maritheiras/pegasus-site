@@ -90,7 +90,11 @@ export function ProductSection() {
                 </div>
               </aside>
     
-              <div className="product-showcase__visual product-showcase__visual--booking" aria-label="Prévia da interface do PEGASUS">
+              <div
+                className="product-showcase__visual product-showcase__visual--booking"
+                aria-label="Prévia da interface do PEGASUS"
+                data-visual-image="/assets/showcase-agenda.jpg"
+              >
                 <div className="product-dashboard product-dashboard--booking" data-product-preview aria-live="polite">
                   <div className="product-dashboard__topbar">
                     <div>

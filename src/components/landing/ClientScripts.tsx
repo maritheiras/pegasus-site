@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const clientScripts = [
   {
     id: "pegasus-shader-script",
-    src: "/scripts/shader-hero.js",
+    src: "/scripts/shader-hero.js?v=stable-fade",
   },
   {
     id: "pegasus-site-script",
