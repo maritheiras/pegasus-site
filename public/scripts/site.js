@@ -21,12 +21,6 @@
     "product-dashboard--team",
     "product-dashboard--finance",
   ];
-  const productVisualThemes = [
-    "product-showcase__visual--booking",
-    "product-showcase__visual--services",
-    "product-showcase__visual--team",
-    "product-showcase__visual--finance",
-  ];
   const productVisualImages = [
     "/assets/showcase-agenda.jpg",
     "/assets/showcase-confirm.jpg",
@@ -38,12 +32,6 @@
     "insight-preview--confirm",
     "insight-preview--margin",
     "insight-preview--clarity",
-  ];
-  const insightVisualThemes = [
-    "insights-showcase__visual--slots",
-    "insights-showcase__visual--confirm",
-    "insights-showcase__visual--margin",
-    "insights-showcase__visual--clarity",
   ];
   const insightVisualImages = [
     "/assets/showcase-agenda.jpg",
@@ -258,8 +246,6 @@
     productPanelTimer = window.setTimeout(() => {
       productPreview.classList.remove(...productPanelThemes);
       productPreview.classList.add(productPanelThemes[index]);
-      productVisual?.classList.remove(...productVisualThemes);
-      productVisual?.classList.add(productVisualThemes[index]);
       renderTemplate(productPreview, getProductPanel(index));
       initCountUps(productPreview);
       requestAnimationFrame(() => {
@@ -325,8 +311,6 @@
     insightPanelTimer = window.setTimeout(() => {
       insightPreview.classList.remove(...insightPanelThemes);
       insightPreview.classList.add(insightPanelThemes[index]);
-      insightVisual?.classList.remove(...insightVisualThemes);
-      insightVisual?.classList.add(insightVisualThemes[index]);
       renderTemplate(insightPreview, getInsightPanel(index));
       initCountUps(insightPreview);
       requestAnimationFrame(() => {

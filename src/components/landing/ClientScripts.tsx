@@ -9,7 +9,7 @@ const clientScripts = [
   },
   {
     id: "pegasus-site-script",
-    src: "/scripts/site.js?v=post-hydration",
+    src: "/scripts/site.js?v=single-background-transition",
   },
 ];
 
