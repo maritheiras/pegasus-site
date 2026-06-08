@@ -2,8 +2,8 @@ import { SOCIAL_LINKS } from "@/constants/social";
 
 export const siteConfig = {
   name: "Pegasus",
-  domain: "https://site.pegasusapp.com.br",
-  appUrl: "https://pegasusapp.com.br",
+  domain: "https://pegasusapp.com.br",
+  appUrl: "https://app.pegasusapp.com.br",
   supportEmail: "suporte@pegasusapp.com.br",
   description:
     "Aplicativo de agendamento, financeiro e operação para salões, barbearias e estúdios de beleza. Clientes agendam por link, sem baixar app.",
